@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!--  protobuf -->
+	<!-- <script src="//cdn.rawgit.com/dcodeIO/protobuf.js/6.X.X/dist/protobuf.min.js"></script> -->
+	<script type="text/javascript" src="Constants.js"></script>
+	<script type="text/javascript">
+		var ws;
+		function start(){
+			ws = new WebSocket("ws://localhost:8888/game"); 
+
+			ws.onmessage = function(event){
+				console.log("onmessage called!");
+				console.log(event);
+			}
+
+			ws.onclose = function(event){
+				console.log("onclose called!");
+			}
+
+			ws.onopen = function(event){
+				console.log("onopen called!");
+			}
+
+			ws.onerror = function(event){
+				console.log("onerror called!");
+			}
+		}
+		function login(){
+			var username = document.getElementById("username");
+			var password = document.getElementById("password");
+
+			if (username.value != "" && password.value != "") {
+				var obj = {};
+				obj[Constants.JK_OP] = Constants.OP_LOGIN;
+				obj[Constants.JK_USERNAME] = username.value;
+				obj[Constants.JK_PASSWORD] = password.value;
+				ws.send(JSON.stringify(obj));
+			}else{
+				alert("请输入账号和密码!");
+			}
+		}
+
+
+		
+	</script>
+</head>  
+<body onload="start();">
+	<form>
+		用户名:<input id="username"></input><br />
+		密码:<input type="password" id="password"></input> <br />
+		<input type="button" onclick="login();" value="登 陆">  </input>
+	</form>
+</body>
+</html>
