@@ -2,6 +2,7 @@ package org.easygame.handle;
 
 import org.easygame.Msg;
 import org.easygame.logic.GameLogic;
+import org.easygame.logic.OnlineUserMap;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.slf4j.Logger;
@@ -28,6 +29,16 @@ public class GameServerHandler extends SimpleChannelInboundHandler<String> {
 			JSONObject object = (JSONObject) tokener.nextValue();
 			GameLogic.getInctance().add(new Msg(ctx.channel(), object));
 		}
+	}
+
+	@Override
+	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+		super.channelInactive(ctx);
+		logger.debug("有玩家离线!");
+		// 有玩家离线
+		OnlineUserMap.getInstance().remove(ctx.channel());
+		logger.info("当前在线玩家数量:{}", OnlineUserMap.getInstance().getOnlineCount());
+		
 	}
 
 }

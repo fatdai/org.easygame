@@ -77,7 +77,7 @@ public class GameServer {
 		int port = 8888;
 		GameServer gameServer = new GameServer();
 		gameServer.run(port);
-		
+
 		// 启动游戏逻辑线程
 		new Thread(GameLogic.getInctance()).start();
 		logger.info("游戏逻辑线程启动......");

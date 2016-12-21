@@ -37,4 +37,8 @@ public class Msg {
 	public String getString(String key) {
 		return object.getString(key);
 	}
+
+	public JSONObject getObject(String key) {
+		return object.getJSONObject(key);
+	}
 }

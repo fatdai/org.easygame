@@ -4,15 +4,72 @@
 	<title></title>
 	<!--  protobuf -->
 	<!-- <script src="//cdn.rawgit.com/dcodeIO/protobuf.js/6.X.X/dist/protobuf.min.js"></script> -->
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="Constants.js"></script>
+	<script type="text/javascript" src="keycode.js"></script>
+	<script type="text/javascript" src="Button.js"></script>
+	<script type="text/javascript" src="Player.js"></script>
+	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="ReplyHandler.js"></script>
 	<script type="text/javascript">
+
+	// json->string   JSON.stringify(obj)
+	// string->json   JSON.parse(str);
+
 		var ws;
 		function start(){
+
+			showLogin();
+
 			ws = new WebSocket("ws://localhost:8888/game"); 
 
 			ws.onmessage = function(event){
 				console.log("onmessage called!");
-				console.log(event);
+				console.log(event.data);
+				var obj = JSON.parse(event.data);
+
+				// 登陆返回
+				if (obj[Constants.JK_OP] == Constants.OP_LOGIN_REPLY) {
+					console.log("login reply code:",obj[Constants.JK_CODE]);
+					if (obj[Constants.JK_CODE] == ReplyCode.ERROR) {
+						console.log("登陆出错!");
+						return;
+					}
+
+					if (obj[Constants.JK_CODE] == ReplyCode.FAILED) {
+						console.log(obj[Constants.JK_DESC]);
+						return;
+					}
+
+					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
+						console.log("登陆成功,准备切换到游戏界面!");
+						showGame(obj);
+						return;
+					}
+
+					console.log("未处理的 code: ",obj[Constants.JK_CODE]);
+				}else if(obj[Constants.JK_OP] == Constants.OP_REGIST_REPLY){
+					// 注册
+					console.log("regist reply code:",obj[Constants.JK_CODE]);
+					if (obj[Constants.JK_CODE] == ReplyCode.ERROR) {
+						console.log("注册出错!");
+						return;
+					}
+
+					if (obj[Constants.JK_CODE] == ReplyCode.FAILED) {
+						console.log(obj[Constants.JK_DESC]);
+						return;
+					}
+
+					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
+						console.log("注册成功,准备切换到游戏界面!");
+						showGame(obj);
+						return;
+					}
+				}else{
+					// process other op
+					process(obj);
+				}
 			}
 
 			ws.onclose = function(event){
@@ -26,7 +83,9 @@
 			ws.onerror = function(event){
 				console.log("onerror called!");
 			}
+
 		}
+
 		function login(){
 			var username = document.getElementById("username");
 			var password = document.getElementById("password");
@@ -42,15 +101,78 @@
 			}
 		}
 
+		// 注册
+		function regist(){
+			var uname = document.getElementById("r_username");
+			var pwd1 = document.getElementById("r_password");
+			var pwd2 = document.getElementById("re_password");
 
-		
+			if (uname.value==""||pwd1.value==""||pwd2.value=="") {
+				alert("输入账号和密码!");
+				return;
+			}else if(pwd1.value != pwd2.value){
+				alert("两次输入密码不一致!");
+				return;
+			}else{
+				// 传送过去
+				var obj = {};
+				obj[Constants.JK_OP] = Constants.OP_REGIST;
+				obj[Constants.JK_USERNAME] = uname.value;
+				obj[Constants.JK_PASSWORD] = pwd1.value;
+				ws.send(JSON.stringify(obj));
+				return;
+			}
+		}
+
+		// 显示注册界面
+		function showRegist() {
+			$("#loginDiv").hide();
+			$("#registDiv").show();
+			$("#gameDiv").hide();
+		}
+
+		// 显示登陆界面
+		function showLogin(){
+			$("#loginDiv").show();
+			$("#registDiv").hide();
+			$("#gameDiv").hide();
+		}
+
+		// 切换到游戏界面
+		function showGame(obj){
+			$("#loginDiv").hide();
+			$("#registDiv").hide();
+			$("#gameDiv").show();
+
+			startGame(obj);
+		}
+
 	</script>
 </head>  
 <body onload="start();">
+
+	<!-- 登陆 -->
+	<div id="loginDiv">
 	<form>
 		用户名:<input id="username"></input><br />
 		密码:<input type="password" id="password"></input> <br />
-		<input type="button" onclick="login();" value="登 陆">  </input>
+		<input type="button" onclick="login();" value="登陆">  </input>
+		<input type="button" onclick="showRegist();" value="去注册">  </input>
 	</form>
+	</div>
+
+	<!-- 注册 -->
+	<div id="registDiv">
+	用户名:<input id="r_username"></input><br />
+	密码:<input type="password" id="r_password"></input> <br />
+	再次输入密码:<input type="password" id="re_password"></input> <br />
+	<input type="button" onclick="regist();" value="注册">  </input>
+	<input type="button" onclick="showLogin();" value="去登陆">  </input>
+	</div>
+
+	<!-- 游戏 -->
+	<div id="gameDiv">
+		<canvas width="480px" height="320px" style="border: 1px;background-color: black;" id="canvas"></canvas>
+	</div>
 </body>
 </html>
