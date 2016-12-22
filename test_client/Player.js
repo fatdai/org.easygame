@@ -1,6 +1,6 @@
 
 var unit = 10;
-var speed = 100;
+var speed = 1;
 
 function Player(obj){
 	
@@ -32,8 +32,8 @@ Player.prototype.render = function(ctx) {
 
 Player.prototype.update = function(dt){
 	if (this.moving) {
-		this.x += (this.mx * dt * speed);
-		this.y += (this.my * dt * speed);
+		this.x += (this.mx  * speed);
+		this.y += (this.my  * speed);
 	}
 }
 
@@ -47,3 +47,18 @@ Player.prototype.startMove = function(dir){
 Player.prototype.endMove = function(){
 	this.moving = false;
 }
+
+Player.prototype.applyInput = function(input){
+	if (input.type == "startmove") {
+		this.moving = true;
+		this.mx = input.dir.dx;
+		this.my = input.dir.dy;
+	}else if (input.type == "endmove") {
+		this.moving = false;
+		this.mx = 0;
+		this.my = 0;
+	}
+}
+
+
+

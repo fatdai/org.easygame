@@ -7,7 +7,6 @@
 	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="Utils.js"></script>
 	<script type="text/javascript" src="Constants.js"></script>
-	<script type="text/javascript" src="NetInput.js"></script>
 	<script type="text/javascript" src="keycode.js"></script>
 	<script type="text/javascript" src="Button.js"></script>
 	<script type="text/javascript" src="Player.js"></script>
@@ -33,72 +32,30 @@
 				// 登陆返回
 				if (obj[Constants.JK_OP] == Constants.OP_LOGIN_REPLY) {
 					console.log("login reply code:",obj[Constants.JK_CODE]);
-					if (obj[Constants.JK_CODE] == ReplyCode.ERROR) {
-						console.log("登陆出错!");
-						return;
-					}
-
-					if (obj[Constants.JK_CODE] == ReplyCode.FAILED) {
-						console.log(obj[Constants.JK_DESC]);
-						return;
-					}
-
 					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
 						console.log("登陆成功,准备切换到游戏界面!");
 						showGame(obj);
 						return;
 					}
-
-					console.log("未处理的 code: ",obj[Constants.JK_CODE]);
+					console.log("登录不成功!");
 				}else if(obj[Constants.JK_OP] == Constants.OP_REGIST_REPLY){
 					// 注册
-					console.log("regist reply code:",obj[Constants.JK_CODE]);
-					if (obj[Constants.JK_CODE] == ReplyCode.ERROR) {
-						console.log("注册出错!");
-						return;
-					}
-
-					if (obj[Constants.JK_CODE] == ReplyCode.FAILED) {
-						console.log(obj[Constants.JK_DESC]);
-						return;
-					}
-
 					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
 						console.log("注册成功,准备切换到游戏界面!");
 						showGame(obj);
 						return;
 					}
+					console.log("注册不成功!");
 				}else if(obj[Constants.JK_OP] == Constants.OP_OTHER_ENTER){
 					// 有其他玩家登陆
-					console.log("other user enter game:",obj[Constants.JK_CODE]);
-					if (obj[Constants.JK_CODE] == ReplyCode.ERROR) {
-						console.log("other user enter game出错!");
-						return;
-					}
-
-					if (obj[Constants.JK_CODE] == ReplyCode.FAILED) {
-						console.log(obj[Constants.JK_DESC]);
-						return;
-					}
-
 					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
 						var newPlayer = new Player(obj[Constants.JK_USER_ENTER_GAME]);
 						others.push(newPlayer);
 						return;
 					}
+					console.log("其他玩家已经登陆!");
 				}else if(obj[Constants.JK_OP] == Constants.OP_OTHERS){
 					// 其他在线的玩家信息
-					console.log("other users:",obj[Constants.JK_CODE]);
-					if (obj[Constants.JK_CODE] == ReplyCode.ERROR) {
-						console.log("other users 出错!");
-						return;
-					}
-
-					if (obj[Constants.JK_CODE] == ReplyCode.FAILED) {
-						console.log(obj[Constants.JK_DESC]);
-						return;
-					}
-
 					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
 						var arr = obj[Constants.JK_OTHERS];
 						for (var i = 0; i < arr.length; i++) {
@@ -107,6 +64,7 @@
 						}
 						return;
 					}
+					console.log("获取其他在线玩家数据错误!");
 				}else if(obj[Constants.JK_OP] == Constants.OP_OTHER_LEAVE){
 					// 有玩家离开
 					for (var i = 0; i < others.length; i++) {

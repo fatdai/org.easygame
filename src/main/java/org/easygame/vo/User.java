@@ -1,8 +1,5 @@
 package org.easygame.vo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.easygame.Constants;
 import org.json.JSONObject;
 
@@ -22,8 +19,13 @@ public class User {
 
 	private int x;
 	private int y;
+
+	public boolean moving = false;
+	public float dx, dy;
+	static final float speed = 1f;
 	
-	public List<NetInput> inputs = new ArrayList<NetInput>();
+	public int lastProcessedFrame = 0; // 上一次被处理输入的帧数
+	public long time;
 
 	public User() {
 
@@ -115,9 +117,47 @@ public class User {
 		object.put(Constants.JK_USERNAME, username);
 		object.put(Constants.JK_X, x);
 		object.put(Constants.JK_Y, y);
+		object.put(Constants.JK_ATTACK, attack);
+		object.put(Constants.JK_DEFENCE, defence);
+		object.put(Constants.JK_LEVEL, level);
+		return object;
+	}
+	
+	public JSONObject genUserState() {
+		JSONObject object = new JSONObject();
+		object.put(Constants.JK_USERNAME, username);
+		object.put(Constants.JK_X, x);
+		object.put(Constants.JK_Y, y);
 		object.put(Constants.JK_ATTACK, x);
 		object.put(Constants.JK_DEFENCE, x);
 		object.put(Constants.JK_LEVEL, level);
+		
+		JSONObject dir = new JSONObject();
+		dir.put("dx", dx);
+		dir.put("dy", dy);
+		
+		object.put("dir", dir);
+		object.put("moving",moving?1:0);
+		object.put("frame", lastProcessedFrame);
+		object.put("time", time);
 		return object;
+	}
+
+	public void applyInput(NetInput input) {
+		if (input.getType().equals("startmove")) {
+			this.moving = true;
+			this.dx = (float) input.getX();
+			this.dy = (float) input.getY();
+		} else if (input.getType().equals("endmove")) {
+			this.moving = false;
+			this.dx = this.dy = 0;
+		}
+	}
+
+	public void update() {
+		if (moving) {
+			this.x += (speed * dx);
+			this.y += (speed * dy);
+		}
 	}
 }

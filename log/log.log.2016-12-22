@@ -1,0 +1,1048 @@
+2016-12-22 02:55:26  [ main:0 ] - [ DEBUG ]  Using SLF4J as the default logging framework
+2016-12-22 02:55:26  [ main:9 ] - [ DEBUG ]  -Dio.netty.eventLoopThreads: 16
+2016-12-22 02:55:26  [ main:52 ] - [ DEBUG ]  java.nio.Buffer.address: available
+2016-12-22 02:55:26  [ main:54 ] - [ DEBUG ]  sun.misc.Unsafe.theUnsafe: available
+2016-12-22 02:55:26  [ main:55 ] - [ DEBUG ]  sun.misc.Unsafe.copyMemory: available
+2016-12-22 02:55:26  [ main:55 ] - [ DEBUG ]  java.nio.Bits.unaligned: true
+2016-12-22 02:55:26  [ main:56 ] - [ DEBUG ]  Java version: 8
+2016-12-22 02:55:26  [ main:56 ] - [ DEBUG ]  -Dio.netty.noUnsafe: false
+2016-12-22 02:55:26  [ main:56 ] - [ DEBUG ]  sun.misc.Unsafe: available
+2016-12-22 02:55:26  [ main:57 ] - [ DEBUG ]  -Dio.netty.noJavassist: false
+2016-12-22 02:55:26  [ main:58 ] - [ DEBUG ]  Javassist: unavailable
+2016-12-22 02:55:26  [ main:58 ] - [ DEBUG ]  You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2016-12-22 02:55:26  [ main:58 ] - [ DEBUG ]  -Dio.netty.tmpdir: /var/folders/xw/vtl8h6j91fg39k49hv9lkq540000gn/T (java.io.tmpdir)
+2016-12-22 02:55:26  [ main:59 ] - [ DEBUG ]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2016-12-22 02:55:26  [ main:59 ] - [ DEBUG ]  -Dio.netty.noPreferDirect: false
+2016-12-22 02:55:26  [ main:60 ] - [ DEBUG ]  -Dio.netty.noKeySetOptimization: false
+2016-12-22 02:55:26  [ main:61 ] - [ DEBUG ]  -Dio.netty.selectorAutoRebuildThreshold: 512
+2016-12-22 02:55:26  [ main:107 ] - [ DEBUG ]  -Dio.netty.processId: 4616 (auto-detected)
+2016-12-22 02:55:26  [ main:112 ] - [ DEBUG ]  -Dio.netty.machineId: 60:f8:1d:ff:fe:b4:49:b4 (auto-detected)
+2016-12-22 02:55:26  [ main:113 ] - [ DEBUG ]  -Dio.netty.initialSeedUniquifier: 0x182aca3a3e6fe512 (took 11 ms)
+2016-12-22 02:55:26  [ main:154 ] - [ DEBUG ]  -Dio.netty.allocator.numHeapArenas: 8
+2016-12-22 02:55:26  [ main:154 ] - [ DEBUG ]  -Dio.netty.allocator.numDirectArenas: 8
+2016-12-22 02:55:26  [ main:154 ] - [ DEBUG ]  -Dio.netty.allocator.pageSize: 8192
+2016-12-22 02:55:26  [ main:155 ] - [ DEBUG ]  -Dio.netty.allocator.maxOrder: 11
+2016-12-22 02:55:26  [ main:155 ] - [ DEBUG ]  -Dio.netty.allocator.chunkSize: 16777216
+2016-12-22 02:55:26  [ main:155 ] - [ DEBUG ]  -Dio.netty.allocator.tinyCacheSize: 512
+2016-12-22 02:55:26  [ main:155 ] - [ DEBUG ]  -Dio.netty.allocator.smallCacheSize: 256
+2016-12-22 02:55:26  [ main:155 ] - [ DEBUG ]  -Dio.netty.allocator.normalCacheSize: 64
+2016-12-22 02:55:26  [ main:156 ] - [ DEBUG ]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2016-12-22 02:55:26  [ main:156 ] - [ DEBUG ]  -Dio.netty.allocator.cacheTrimInterval: 8192
+2016-12-22 02:55:26  [ main:162 ] - [ DEBUG ]  -Dio.netty.allocator.type: pooled
+2016-12-22 02:55:26  [ main:163 ] - [ DEBUG ]  -Dio.netty.threadLocalDirectBufferSize: 65536
+2016-12-22 02:55:26  [ main:165 ] - [ DEBUG ]  Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1)
+2016-12-22 02:55:26  [ main:166 ] - [ DEBUG ]  /proc/sys/net/core/somaxconn: 128 (non-existent)
+2016-12-22 02:55:26  [ main:181 ] - [ INFO ]  server start at port 8888
+2016-12-22 02:55:26  [ main:182 ] - [ INFO ]  游戏逻辑线程启动......
+2016-12-22 02:56:02  [ nioEventLoopGroup-1-0:35502 ] - [ DEBUG ]  -Dio.netty.leakDetectionLevel: simple
+2016-12-22 02:56:02  [ nioEventLoopGroup-1-0:35555 ] - [ DEBUG ]  -Dio.netty.recycler.maxCapacity: 262144
+2016-12-22 02:56:02  [ nioEventLoopGroup-1-0:35586 ] - [ DEBUG ]  [id: 0x8e72c63e, /0:0:0:0:0:0:0:1:59471 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 02:56:02  [ nioEventLoopGroup-1-0:35590 ] - [ DEBUG ]  WebSocket version 13 server handshake key: 4PQm+crw/bnmvJdsWG7mTQ==, response: TUVtL97V/qsp71XqJBIBOPnboGo=
+2016-12-22 02:56:11  [ nioEventLoopGroup-1-0:45000 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 02:56:11  [ nioEventLoopGroup-1-0:45001 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 02:56:11  [ nioEventLoopGroup-1-0:45004 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 02:56:11  [ nioEventLoopGroup-1-0:45004 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 02:56:11  [ nioEventLoopGroup-1-0:45006 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 02:56:11  [ Thread-0:45021 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 02:56:11  [ Thread-0:45129 ] - [ INFO ]  Connected to SQLite 3.15.1
+2016-12-22 02:56:11  [ nioEventLoopGroup-1-0:45139 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 02:56:11  [ nioEventLoopGroup-1-0:45140 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46568 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46569 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46570 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9293724967814102,"y":0.36914328143186853}}
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46570 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46570 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9293724967814102,"y":0.36914328143186853}}
+2016-12-22 02:56:13  [ Thread-0:46588 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9293724967814102,"y":0.36914328143186853},"code":1}
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46589 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9293724967814102,"y":0.36914328143186853},"code":1}
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46590 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46695 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46696 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46696 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46696 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46697 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46701 ] - [ DEBUG ]  encode : {"op":105,"code":1}
+2016-12-22 02:56:13  [ nioEventLoopGroup-1-0:46701 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:00:36  [ main:0 ] - [ DEBUG ]  Using SLF4J as the default logging framework
+2016-12-22 03:00:36  [ main:7 ] - [ DEBUG ]  -Dio.netty.eventLoopThreads: 16
+2016-12-22 03:00:36  [ main:44 ] - [ DEBUG ]  java.nio.Buffer.address: available
+2016-12-22 03:00:36  [ main:45 ] - [ DEBUG ]  sun.misc.Unsafe.theUnsafe: available
+2016-12-22 03:00:36  [ main:46 ] - [ DEBUG ]  sun.misc.Unsafe.copyMemory: available
+2016-12-22 03:00:36  [ main:47 ] - [ DEBUG ]  java.nio.Bits.unaligned: true
+2016-12-22 03:00:36  [ main:47 ] - [ DEBUG ]  Java version: 8
+2016-12-22 03:00:36  [ main:47 ] - [ DEBUG ]  -Dio.netty.noUnsafe: false
+2016-12-22 03:00:36  [ main:48 ] - [ DEBUG ]  sun.misc.Unsafe: available
+2016-12-22 03:00:36  [ main:48 ] - [ DEBUG ]  -Dio.netty.noJavassist: false
+2016-12-22 03:00:36  [ main:49 ] - [ DEBUG ]  Javassist: unavailable
+2016-12-22 03:00:36  [ main:49 ] - [ DEBUG ]  You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2016-12-22 03:00:36  [ main:49 ] - [ DEBUG ]  -Dio.netty.tmpdir: /var/folders/xw/vtl8h6j91fg39k49hv9lkq540000gn/T (java.io.tmpdir)
+2016-12-22 03:00:36  [ main:50 ] - [ DEBUG ]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2016-12-22 03:00:36  [ main:50 ] - [ DEBUG ]  -Dio.netty.noPreferDirect: false
+2016-12-22 03:00:36  [ main:50 ] - [ DEBUG ]  -Dio.netty.noKeySetOptimization: false
+2016-12-22 03:00:36  [ main:52 ] - [ DEBUG ]  -Dio.netty.selectorAutoRebuildThreshold: 512
+2016-12-22 03:00:36  [ main:93 ] - [ DEBUG ]  -Dio.netty.processId: 4630 (auto-detected)
+2016-12-22 03:00:36  [ main:98 ] - [ DEBUG ]  -Dio.netty.machineId: 60:f8:1d:ff:fe:b4:49:b4 (auto-detected)
+2016-12-22 03:00:36  [ main:100 ] - [ DEBUG ]  -Dio.netty.initialSeedUniquifier: 0x611d6ec90e001951 (took 12 ms)
+2016-12-22 03:00:36  [ main:130 ] - [ DEBUG ]  -Dio.netty.allocator.numHeapArenas: 8
+2016-12-22 03:00:36  [ main:130 ] - [ DEBUG ]  -Dio.netty.allocator.numDirectArenas: 8
+2016-12-22 03:00:36  [ main:131 ] - [ DEBUG ]  -Dio.netty.allocator.pageSize: 8192
+2016-12-22 03:00:36  [ main:131 ] - [ DEBUG ]  -Dio.netty.allocator.maxOrder: 11
+2016-12-22 03:00:36  [ main:131 ] - [ DEBUG ]  -Dio.netty.allocator.chunkSize: 16777216
+2016-12-22 03:00:36  [ main:131 ] - [ DEBUG ]  -Dio.netty.allocator.tinyCacheSize: 512
+2016-12-22 03:00:36  [ main:131 ] - [ DEBUG ]  -Dio.netty.allocator.smallCacheSize: 256
+2016-12-22 03:00:36  [ main:131 ] - [ DEBUG ]  -Dio.netty.allocator.normalCacheSize: 64
+2016-12-22 03:00:36  [ main:132 ] - [ DEBUG ]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2016-12-22 03:00:36  [ main:132 ] - [ DEBUG ]  -Dio.netty.allocator.cacheTrimInterval: 8192
+2016-12-22 03:00:36  [ main:136 ] - [ DEBUG ]  -Dio.netty.allocator.type: pooled
+2016-12-22 03:00:36  [ main:136 ] - [ DEBUG ]  -Dio.netty.threadLocalDirectBufferSize: 65536
+2016-12-22 03:00:36  [ main:138 ] - [ DEBUG ]  Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1)
+2016-12-22 03:00:36  [ main:138 ] - [ DEBUG ]  /proc/sys/net/core/somaxconn: 128 (non-existent)
+2016-12-22 03:00:36  [ main:152 ] - [ INFO ]  server start at port 8888
+2016-12-22 03:00:36  [ main:153 ] - [ INFO ]  游戏逻辑线程启动......
+2016-12-22 03:00:39  [ nioEventLoopGroup-1-0:2925 ] - [ DEBUG ]  -Dio.netty.leakDetectionLevel: simple
+2016-12-22 03:00:39  [ nioEventLoopGroup-1-0:2965 ] - [ DEBUG ]  -Dio.netty.recycler.maxCapacity: 262144
+2016-12-22 03:00:39  [ nioEventLoopGroup-1-0:2989 ] - [ DEBUG ]  [id: 0xdfa9a91f, /0:0:0:0:0:0:0:1:59566 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:00:39  [ nioEventLoopGroup-1-0:2992 ] - [ DEBUG ]  WebSocket version 13 server handshake key: K7PBXc38hahDmgHFR1teUA==, response: wC5zeQDof9DXdpzkNDCN/7Pizp8=
+2016-12-22 03:00:42  [ nioEventLoopGroup-1-0:5681 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:00:42  [ nioEventLoopGroup-1-0:5682 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 03:00:42  [ nioEventLoopGroup-1-0:5685 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 03:00:42  [ nioEventLoopGroup-1-0:5686 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:00:42  [ nioEventLoopGroup-1-0:5688 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 03:00:42  [ Thread-0:5694 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 03:00:42  [ Thread-0:5788 ] - [ INFO ]  Connected to SQLite 3.15.1
+2016-12-22 03:00:42  [ nioEventLoopGroup-1-0:5796 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 03:00:42  [ nioEventLoopGroup-1-0:5797 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7113 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7114 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7115 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.8839265931008972,"y":0.4676256815114424}}
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7116 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7116 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.8839265931008972,"y":0.4676256815114424}}
+2016-12-22 03:00:43  [ Thread-0:7121 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.8839265931008972,"y":0.4676256815114424},"code":1}
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7121 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.8839265931008972,"y":0.4676256815114424},"code":1}
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7121 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7208 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7208 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7209 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7209 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7209 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7214 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:00:43  [ nioEventLoopGroup-1-0:7215 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:00:45  [ nioEventLoopGroup-1-0:9050 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:00:45  [ nioEventLoopGroup-1-0:9051 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:00:45  [ nioEventLoopGroup-1-0:9051 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.8768467065638871,"y":0.48077006269948264}}
+2016-12-22 03:00:45  [ nioEventLoopGroup-1-0:9051 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:00:45  [ nioEventLoopGroup-1-0:9052 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.8768467065638871,"y":0.48077006269948264}}
+2016-12-22 03:00:45  [ Thread-0:9073 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.8768467065638871,"y":0.48077006269948264},"code":1}
+2016-12-22 03:00:45  [ nioEventLoopGroup-1-0:9073 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.8768467065638871,"y":0.48077006269948264},"code":1}
+2016-12-22 03:00:45  [ nioEventLoopGroup-1-0:9074 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:00:49  [ nioEventLoopGroup-1-0:12649 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:00:49  [ nioEventLoopGroup-1-0:12650 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:00:49  [ nioEventLoopGroup-1-0:12650 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:00:49  [ nioEventLoopGroup-1-0:12650 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:00:49  [ nioEventLoopGroup-1-0:12651 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:00:49  [ nioEventLoopGroup-1-0:12657 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:00:49  [ nioEventLoopGroup-1-0:12657 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:02  [ nioEventLoopGroup-1-0:26002 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 03:01:02  [ nioEventLoopGroup-1-0:26003 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 03:01:02  [ nioEventLoopGroup-1-0:26003 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 03:01:02  [ nioEventLoopGroup-1-0:26005 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 03:01:02  [ nioEventLoopGroup-1-0:26006 ] - [ DEBUG ]  remove key : dai
+2016-12-22 03:01:02  [ nioEventLoopGroup-1-0:26006 ] - [ INFO ]  当前在线玩家数量:0
+2016-12-22 03:01:02  [ nioEventLoopGroup-1-1:26151 ] - [ DEBUG ]  [id: 0x81388daf, /0:0:0:0:0:0:0:1:59573 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:01:02  [ nioEventLoopGroup-1-1:26151 ] - [ DEBUG ]  WebSocket version 13 server handshake key: ZDEB0X3ucrGfqYnoO5BnxQ==, response: E5An3NL10XFgtfqFrTSI3XA5eRI=
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:28519 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:28520 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:28521 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:28521 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:28521 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 03:01:05  [ Thread-0:28539 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:28541 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:28541 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:29280 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:29280 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:29281 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.8593828023542573,"y":0.5113327674007832}}
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:29282 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:29282 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.8593828023542573,"y":0.5113327674007832}}
+2016-12-22 03:01:05  [ Thread-0:29290 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.8593828023542573,"y":0.5113327674007832},"code":1}
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:29291 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.8593828023542573,"y":0.5113327674007832},"code":1}
+2016-12-22 03:01:05  [ nioEventLoopGroup-1-1:29291 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:07  [ nioEventLoopGroup-1-2:30786 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:07  [ nioEventLoopGroup-1-2:30787 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:07  [ nioEventLoopGroup-1-2:30787 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:07  [ nioEventLoopGroup-1-2:30787 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:07  [ nioEventLoopGroup-1-2:30787 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:07  [ nioEventLoopGroup-1-2:30796 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:07  [ nioEventLoopGroup-1-2:30797 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:13  [ nioEventLoopGroup-1-1:36657 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 03:01:13  [ nioEventLoopGroup-1-1:36658 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 03:01:13  [ nioEventLoopGroup-1-1:36658 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 03:01:13  [ nioEventLoopGroup-1-1:36658 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 03:01:13  [ nioEventLoopGroup-1-1:36659 ] - [ DEBUG ]  remove key : dai
+2016-12-22 03:01:13  [ nioEventLoopGroup-1-1:36659 ] - [ INFO ]  当前在线玩家数量:0
+2016-12-22 03:01:13  [ nioEventLoopGroup-1-2:36794 ] - [ DEBUG ]  [id: 0x3f426fe8, /0:0:0:0:0:0:0:1:59577 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:01:13  [ nioEventLoopGroup-1-2:36795 ] - [ DEBUG ]  WebSocket version 13 server handshake key: vr8j15GeWn0OUBv7BzB52w==, response: oq6byLnoFGpQOkAaKBfedv8Lpks=
+2016-12-22 03:01:15  [ nioEventLoopGroup-1-2:39199 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:15  [ nioEventLoopGroup-1-2:39199 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 03:01:15  [ nioEventLoopGroup-1-2:39200 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 03:01:15  [ nioEventLoopGroup-1-2:39200 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:15  [ nioEventLoopGroup-1-2:39201 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 03:01:15  [ Thread-0:39209 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 03:01:15  [ nioEventLoopGroup-1-2:39210 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 03:01:15  [ nioEventLoopGroup-1-2:39210 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 03:01:16  [ nioEventLoopGroup-1-3:39819 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:16  [ nioEventLoopGroup-1-3:39819 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:01:16  [ nioEventLoopGroup-1-3:39820 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9083538225472951,"y":0.41820250245989327}}
+2016-12-22 03:01:16  [ nioEventLoopGroup-1-3:39820 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:16  [ nioEventLoopGroup-1-3:39820 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9083538225472951,"y":0.41820250245989327}}
+2016-12-22 03:01:16  [ Thread-0:39834 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9083538225472951,"y":0.41820250245989327},"code":1}
+2016-12-22 03:01:16  [ nioEventLoopGroup-1-3:39836 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9083538225472951,"y":0.41820250245989327},"code":1}
+2016-12-22 03:01:16  [ nioEventLoopGroup-1-3:39836 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:40974 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:40975 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:40975 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:40975 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:40976 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:40995 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:40996 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:41215 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:41216 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:41217 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9226839298308881,"y":-0.3855572144725459}}
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:41218 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:41218 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9226839298308881,"y":-0.3855572144725459}}
+2016-12-22 03:01:17  [ Thread-0:41231 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9226839298308881,"y":-0.3855572144725459},"code":1}
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:41232 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9226839298308881,"y":-0.3855572144725459},"code":1}
+2016-12-22 03:01:17  [ nioEventLoopGroup-1-2:41232 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-2:42574 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-2:42574 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-2:42575 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-2:42575 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-2:42575 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-2:42592 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-2:42592 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-4:43058 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-4:43058 ] - [ DEBUG ]  Decoding WebSocket Frame length=68
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-4:43059 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.9987562695232127,"y":0.049858941906902786}}
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-4:43059 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-4:43059 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.9987562695232127,"y":0.049858941906902786}}
+2016-12-22 03:01:19  [ Thread-0:43075 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.9987562695232127,"y":0.049858941906902786},"code":1}
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-4:43076 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.9987562695232127,"y":0.049858941906902786},"code":1}
+2016-12-22 03:01:19  [ nioEventLoopGroup-1-4:43076 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=77
+2016-12-22 03:01:20  [ nioEventLoopGroup-1-4:44406 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:20  [ nioEventLoopGroup-1-4:44406 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:20  [ nioEventLoopGroup-1-4:44407 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:20  [ nioEventLoopGroup-1-4:44407 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:20  [ nioEventLoopGroup-1-4:44407 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:20  [ nioEventLoopGroup-1-4:44420 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:20  [ nioEventLoopGroup-1-4:44420 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:21  [ nioEventLoopGroup-1-3:44815 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:21  [ nioEventLoopGroup-1-3:44815 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:21  [ nioEventLoopGroup-1-3:44816 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.7909388982520558,"y":0.6118951374474421}}
+2016-12-22 03:01:21  [ nioEventLoopGroup-1-3:44816 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:21  [ nioEventLoopGroup-1-3:44816 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.7909388982520558,"y":0.6118951374474421}}
+2016-12-22 03:01:21  [ Thread-0:44838 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.7909388982520558,"y":0.6118951374474421},"code":1}
+2016-12-22 03:01:21  [ nioEventLoopGroup-1-3:44838 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.7909388982520558,"y":0.6118951374474421},"code":1}
+2016-12-22 03:01:21  [ nioEventLoopGroup-1-3:44838 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46022 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46022 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46022 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46023 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46023 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46045 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46046 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46374 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46375 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46375 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.9106416150560896,"y":0.4131971066307661}}
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46375 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46376 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.9106416150560896,"y":0.4131971066307661}}
+2016-12-22 03:01:22  [ Thread-0:46394 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.9106416150560896,"y":0.4131971066307661},"code":1}
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46395 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.9106416150560896,"y":0.4131971066307661},"code":1}
+2016-12-22 03:01:22  [ nioEventLoopGroup-1-2:46395 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:01:23  [ nioEventLoopGroup-1-2:47398 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:23  [ nioEventLoopGroup-1-2:47398 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:23  [ nioEventLoopGroup-1-2:47399 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:23  [ nioEventLoopGroup-1-2:47399 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:23  [ nioEventLoopGroup-1-2:47399 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:23  [ nioEventLoopGroup-1-2:47417 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:23  [ nioEventLoopGroup-1-2:47417 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:24  [ nioEventLoopGroup-1-2:47767 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:24  [ nioEventLoopGroup-1-2:47767 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:24  [ nioEventLoopGroup-1-2:47768 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.697431827833657,"y":-0.716651132368187}}
+2016-12-22 03:01:24  [ nioEventLoopGroup-1-2:47769 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:24  [ nioEventLoopGroup-1-2:47769 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.697431827833657,"y":-0.716651132368187}}
+2016-12-22 03:01:24  [ Thread-0:47789 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.697431827833657,"y":-0.716651132368187},"code":1}
+2016-12-22 03:01:24  [ nioEventLoopGroup-1-2:47789 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.697431827833657,"y":-0.716651132368187},"code":1}
+2016-12-22 03:01:24  [ nioEventLoopGroup-1-2:47789 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48734 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48735 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48736 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48736 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48737 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48740 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48740 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48998 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48999 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:48999 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9763372802373973,"y":-0.21625335886094793}}
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:49000 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:49000 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9763372802373973,"y":-0.21625335886094793}}
+2016-12-22 03:01:25  [ Thread-0:49017 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9763372802373973,"y":-0.21625335886094793},"code":1}
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:49018 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9763372802373973,"y":-0.21625335886094793},"code":1}
+2016-12-22 03:01:25  [ nioEventLoopGroup-1-2:49018 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-2:49678 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-2:49678 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-2:49679 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-2:49679 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-2:49679 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-2:49696 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-2:49696 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:49894 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:49895 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:49895 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.8749273460181498,"y":0.4842542092637261}}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:49896 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:49896 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.8749273460181498,"y":0.4842542092637261}}
+2016-12-22 03:01:26  [ Thread-0:49901 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.8749273460181498,"y":0.4842542092637261},"code":1}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:49901 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.8749273460181498,"y":0.4842542092637261},"code":1}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:49902 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50037 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50037 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50037 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50038 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50038 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50039 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50039 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50310 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50311 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50311 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.5535531999531574,"y":0.8328138176216936}}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50312 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50312 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.5535531999531574,"y":0.8328138176216936}}
+2016-12-22 03:01:26  [ Thread-0:50319 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.5535531999531574,"y":0.8328138176216936},"code":1}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50319 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.5535531999531574,"y":0.8328138176216936},"code":1}
+2016-12-22 03:01:26  [ nioEventLoopGroup-1-4:50320 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50629 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50629 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50630 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50630 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50630 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50644 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50645 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50853 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50854 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50854 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.6820144995194902,"y":0.7313386509990971}}
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50854 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50854 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.6820144995194902,"y":0.7313386509990971}}
+2016-12-22 03:01:27  [ Thread-0:50856 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.6820144995194902,"y":0.7313386509990971},"code":1}
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50856 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.6820144995194902,"y":0.7313386509990971},"code":1}
+2016-12-22 03:01:27  [ nioEventLoopGroup-1-4:50856 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51629 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51629 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51630 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51630 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51630 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51636 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51636 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51941 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51942 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51942 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.9092936808746976,"y":-0.4161550215020161}}
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51942 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51942 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.9092936808746976,"y":-0.4161550215020161}}
+2016-12-22 03:01:28  [ Thread-0:51963 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.9092936808746976,"y":-0.4161550215020161},"code":1}
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51964 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.9092936808746976,"y":-0.4161550215020161},"code":1}
+2016-12-22 03:01:28  [ nioEventLoopGroup-1-4:51964 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:52861 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:52861 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:52861 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:52861 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:52862 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:52883 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:52884 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:53133 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:53134 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:53134 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9192719791135534,"y":-0.39362295209584847}}
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:53134 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:53135 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9192719791135534,"y":-0.39362295209584847}}
+2016-12-22 03:01:29  [ Thread-0:53153 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9192719791135534,"y":-0.39362295209584847},"code":1}
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:53153 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9192719791135534,"y":-0.39362295209584847},"code":1}
+2016-12-22 03:01:29  [ nioEventLoopGroup-1-4:53153 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 03:01:30  [ nioEventLoopGroup-1-4:54013 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:30  [ nioEventLoopGroup-1-4:54013 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:30  [ nioEventLoopGroup-1-4:54013 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:30  [ nioEventLoopGroup-1-4:54014 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:30  [ nioEventLoopGroup-1-4:54014 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:30  [ nioEventLoopGroup-1-4:54034 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:30  [ nioEventLoopGroup-1-4:54034 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:32  [ nioEventLoopGroup-1-4:55678 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:32  [ nioEventLoopGroup-1-4:55679 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:01:32  [ nioEventLoopGroup-1-4:55679 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9012092568324476,"y":-0.4333842122176439}}
+2016-12-22 03:01:32  [ nioEventLoopGroup-1-4:55680 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:32  [ nioEventLoopGroup-1-4:55680 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9012092568324476,"y":-0.4333842122176439}}
+2016-12-22 03:01:32  [ Thread-0:55684 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9012092568324476,"y":-0.4333842122176439},"code":1}
+2016-12-22 03:01:32  [ nioEventLoopGroup-1-4:55685 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9012092568324476,"y":-0.4333842122176439},"code":1}
+2016-12-22 03:01:32  [ nioEventLoopGroup-1-4:55685 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56550 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56550 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56550 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56551 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56551 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56565 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56565 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56829 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56829 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56830 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9973211892625178,"y":-0.07314673914808083}}
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56830 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56830 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9973211892625178,"y":-0.07314673914808083}}
+2016-12-22 03:01:33  [ Thread-0:56839 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9973211892625178,"y":-0.07314673914808083},"code":1}
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56839 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9973211892625178,"y":-0.07314673914808083},"code":1}
+2016-12-22 03:01:33  [ nioEventLoopGroup-1-2:56839 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 03:01:35  [ nioEventLoopGroup-1-2:59446 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:35  [ nioEventLoopGroup-1-2:59447 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:35  [ nioEventLoopGroup-1-2:59447 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:35  [ nioEventLoopGroup-1-2:59447 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:35  [ nioEventLoopGroup-1-2:59447 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:35  [ nioEventLoopGroup-1-2:59457 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:35  [ nioEventLoopGroup-1-2:59457 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:36  [ nioEventLoopGroup-1-2:59822 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:36  [ nioEventLoopGroup-1-2:59822 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 03:01:36  [ nioEventLoopGroup-1-2:59823 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.9998254013947316,"y":0.01868600347489096}}
+2016-12-22 03:01:36  [ nioEventLoopGroup-1-2:59823 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:36  [ nioEventLoopGroup-1-2:59823 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.9998254013947316,"y":0.01868600347489096}}
+2016-12-22 03:01:36  [ Thread-0:59842 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.9998254013947316,"y":0.01868600347489096},"code":1}
+2016-12-22 03:01:36  [ nioEventLoopGroup-1-2:59842 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.9998254013947316,"y":0.01868600347489096},"code":1}
+2016-12-22 03:01:36  [ nioEventLoopGroup-1-2:59842 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61085 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61086 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61087 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61087 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61087 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61094 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61094 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61325 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61325 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61326 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.8949167646777195,"y":0.44623310533706834}}
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61326 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61326 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.8949167646777195,"y":0.44623310533706834}}
+2016-12-22 03:01:37  [ Thread-0:61347 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.8949167646777195,"y":0.44623310533706834},"code":1}
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61347 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.8949167646777195,"y":0.44623310533706834},"code":1}
+2016-12-22 03:01:37  [ nioEventLoopGroup-1-2:61347 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 03:01:39  [ nioEventLoopGroup-1-2:63261 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:39  [ nioEventLoopGroup-1-2:63262 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:39  [ nioEventLoopGroup-1-2:63262 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:39  [ nioEventLoopGroup-1-2:63262 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:39  [ nioEventLoopGroup-1-2:63262 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:39  [ nioEventLoopGroup-1-2:63285 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:39  [ nioEventLoopGroup-1-2:63286 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:63534 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:63534 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:63535 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9224745612208406,"y":0.3860578763610681}}
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:63535 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:63535 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9224745612208406,"y":0.3860578763610681}}
+2016-12-22 03:01:40  [ Thread-0:63555 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9224745612208406,"y":0.3860578763610681},"code":1}
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:63555 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9224745612208406,"y":0.3860578763610681},"code":1}
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:63556 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:64389 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:64389 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:64390 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:64390 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:64390 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:64391 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:40  [ nioEventLoopGroup-1-2:64391 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:64669 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:64670 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:64671 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.992412911642759,"y":0.12294963523630906}}
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:64672 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:64672 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.992412911642759,"y":0.12294963523630906}}
+2016-12-22 03:01:41  [ Thread-0:64686 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.992412911642759,"y":0.12294963523630906},"code":1}
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:64687 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.992412911642759,"y":0.12294963523630906},"code":1}
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:64687 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:65269 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:65269 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:65270 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:65270 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:65270 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:65287 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:41  [ nioEventLoopGroup-1-2:65287 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:42  [ nioEventLoopGroup-1-2:65541 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:42  [ nioEventLoopGroup-1-2:65541 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:01:42  [ nioEventLoopGroup-1-2:65542 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.737499571237422,"y":-0.6753476011837302}}
+2016-12-22 03:01:42  [ nioEventLoopGroup-1-2:65542 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:42  [ nioEventLoopGroup-1-2:65542 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.737499571237422,"y":-0.6753476011837302}}
+2016-12-22 03:01:42  [ Thread-0:65543 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.737499571237422,"y":-0.6753476011837302},"code":1}
+2016-12-22 03:01:42  [ nioEventLoopGroup-1-2:65543 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.737499571237422,"y":-0.6753476011837302},"code":1}
+2016-12-22 03:01:42  [ nioEventLoopGroup-1-2:65543 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66517 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66518 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66518 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66518 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66518 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66539 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66539 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66741 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66741 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66741 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.9276935602221116,"y":-0.37334254823475904}}
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66741 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66742 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.9276935602221116,"y":-0.37334254823475904}}
+2016-12-22 03:01:43  [ Thread-0:66748 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.9276935602221116,"y":-0.37334254823475904},"code":1}
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66748 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.9276935602221116,"y":-0.37334254823475904},"code":1}
+2016-12-22 03:01:43  [ nioEventLoopGroup-1-4:66748 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67597 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67597 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67598 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67598 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67598 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67609 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67609 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67870 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67870 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67871 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.7146002392329859,"y":0.6995330571804017}}
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67871 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67872 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.7146002392329859,"y":0.6995330571804017}}
+2016-12-22 03:01:44  [ Thread-0:67888 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.7146002392329859,"y":0.6995330571804017},"code":1}
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67889 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.7146002392329859,"y":0.6995330571804017},"code":1}
+2016-12-22 03:01:44  [ nioEventLoopGroup-1-4:67889 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68557 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68557 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68557 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68557 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68558 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68569 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68569 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68806 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68807 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68807 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.760768840554626,"y":0.6490229358359919}}
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68807 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68807 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.760768840554626,"y":0.6490229358359919}}
+2016-12-22 03:01:45  [ Thread-0:68820 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.760768840554626,"y":0.6490229358359919},"code":1}
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68821 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.760768840554626,"y":0.6490229358359919},"code":1}
+2016-12-22 03:01:45  [ nioEventLoopGroup-1-4:68821 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-4:69611 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-4:69611 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-4:69611 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-4:69612 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-4:69612 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-4:69627 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-4:69627 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-2:69902 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-2:69902 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-2:69902 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":-0.8228679358307434,"y":-0.5682326637757211}}
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-2:69903 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-2:69903 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":-0.8228679358307434,"y":-0.5682326637757211}}
+2016-12-22 03:01:46  [ Thread-0:69905 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":-0.8228679358307434,"y":-0.5682326637757211},"code":1}
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-2:69907 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":-0.8228679358307434,"y":-0.5682326637757211},"code":1}
+2016-12-22 03:01:46  [ nioEventLoopGroup-1-2:69907 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 03:01:47  [ nioEventLoopGroup-1-2:70725 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:47  [ nioEventLoopGroup-1-2:70725 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:47  [ nioEventLoopGroup-1-2:70725 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:47  [ nioEventLoopGroup-1-2:70725 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:47  [ nioEventLoopGroup-1-2:70726 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:47  [ nioEventLoopGroup-1-2:70730 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:47  [ nioEventLoopGroup-1-2:70730 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:50  [ nioEventLoopGroup-1-2:74309 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:50  [ nioEventLoopGroup-1-2:74309 ] - [ DEBUG ]  Decoding WebSocket Frame length=66
+2016-12-22 03:01:50  [ nioEventLoopGroup-1-2:74310 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.7688629582077336,"y":-0.6394135997115269}}
+2016-12-22 03:01:50  [ nioEventLoopGroup-1-2:74310 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:50  [ nioEventLoopGroup-1-2:74310 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.7688629582077336,"y":-0.6394135997115269}}
+2016-12-22 03:01:50  [ Thread-0:74319 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.7688629582077336,"y":-0.6394135997115269},"code":1}
+2016-12-22 03:01:50  [ nioEventLoopGroup-1-2:74320 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.7688629582077336,"y":-0.6394135997115269},"code":1}
+2016-12-22 03:01:50  [ nioEventLoopGroup-1-2:74320 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=75
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-2:74941 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-2:74941 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-2:74941 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-2:74941 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-2:74942 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-2:74963 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-2:74963 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75197 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75198 ] - [ DEBUG ]  Decoding WebSocket Frame length=65
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75198 ] - [ DEBUG ]  decode : {"op":104,"mdir":{"x":0.8119170451646491,"y":0.5837728254818865}}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75198 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75198 ] - [ DEBUG ]  msg is :{"op":104,"mdir":{"x":0.8119170451646491,"y":0.5837728254818865}}
+2016-12-22 03:01:51  [ Thread-0:75217 ] - [ DEBUG ]  发送的消息:{"op":105,"mdir":{"x":0.8119170451646491,"y":0.5837728254818865},"code":1}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75217 ] - [ DEBUG ]  encode : {"op":105,"mdir":{"x":0.8119170451646491,"y":0.5837728254818865},"code":1}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75218 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=74
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75391 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75391 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75391 ] - [ DEBUG ]  decode : {"op":106}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75392 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75392 ] - [ DEBUG ]  msg is :{"op":106}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75402 ] - [ DEBUG ]  encode : {"op":107,"code":1}
+2016-12-22 03:01:51  [ nioEventLoopGroup-1-1:75402 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 03:50:55  [ main:0 ] - [ DEBUG ]  Using SLF4J as the default logging framework
+2016-12-22 03:50:55  [ main:10 ] - [ DEBUG ]  -Dio.netty.eventLoopThreads: 16
+2016-12-22 03:50:55  [ main:45 ] - [ DEBUG ]  java.nio.Buffer.address: available
+2016-12-22 03:50:55  [ main:47 ] - [ DEBUG ]  sun.misc.Unsafe.theUnsafe: available
+2016-12-22 03:50:55  [ main:47 ] - [ DEBUG ]  sun.misc.Unsafe.copyMemory: available
+2016-12-22 03:50:55  [ main:48 ] - [ DEBUG ]  java.nio.Bits.unaligned: true
+2016-12-22 03:50:55  [ main:48 ] - [ DEBUG ]  Java version: 8
+2016-12-22 03:50:55  [ main:49 ] - [ DEBUG ]  -Dio.netty.noUnsafe: false
+2016-12-22 03:50:55  [ main:49 ] - [ DEBUG ]  sun.misc.Unsafe: available
+2016-12-22 03:50:55  [ main:49 ] - [ DEBUG ]  -Dio.netty.noJavassist: false
+2016-12-22 03:50:55  [ main:50 ] - [ DEBUG ]  Javassist: unavailable
+2016-12-22 03:50:55  [ main:50 ] - [ DEBUG ]  You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2016-12-22 03:50:55  [ main:51 ] - [ DEBUG ]  -Dio.netty.tmpdir: /var/folders/xw/vtl8h6j91fg39k49hv9lkq540000gn/T (java.io.tmpdir)
+2016-12-22 03:50:55  [ main:51 ] - [ DEBUG ]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2016-12-22 03:50:55  [ main:51 ] - [ DEBUG ]  -Dio.netty.noPreferDirect: false
+2016-12-22 03:50:55  [ main:52 ] - [ DEBUG ]  -Dio.netty.noKeySetOptimization: false
+2016-12-22 03:50:55  [ main:54 ] - [ DEBUG ]  -Dio.netty.selectorAutoRebuildThreshold: 512
+2016-12-22 03:50:55  [ main:98 ] - [ DEBUG ]  -Dio.netty.processId: 4738 (auto-detected)
+2016-12-22 03:50:55  [ main:102 ] - [ DEBUG ]  -Dio.netty.machineId: 60:f8:1d:ff:fe:b4:49:b4 (auto-detected)
+2016-12-22 03:50:55  [ main:104 ] - [ DEBUG ]  -Dio.netty.initialSeedUniquifier: 0x531320be5e87c86c (took 10 ms)
+2016-12-22 03:50:55  [ main:135 ] - [ DEBUG ]  -Dio.netty.allocator.numHeapArenas: 8
+2016-12-22 03:50:55  [ main:135 ] - [ DEBUG ]  -Dio.netty.allocator.numDirectArenas: 8
+2016-12-22 03:50:55  [ main:136 ] - [ DEBUG ]  -Dio.netty.allocator.pageSize: 8192
+2016-12-22 03:50:55  [ main:136 ] - [ DEBUG ]  -Dio.netty.allocator.maxOrder: 11
+2016-12-22 03:50:55  [ main:136 ] - [ DEBUG ]  -Dio.netty.allocator.chunkSize: 16777216
+2016-12-22 03:50:55  [ main:136 ] - [ DEBUG ]  -Dio.netty.allocator.tinyCacheSize: 512
+2016-12-22 03:50:55  [ main:137 ] - [ DEBUG ]  -Dio.netty.allocator.smallCacheSize: 256
+2016-12-22 03:50:55  [ main:137 ] - [ DEBUG ]  -Dio.netty.allocator.normalCacheSize: 64
+2016-12-22 03:50:55  [ main:137 ] - [ DEBUG ]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2016-12-22 03:50:55  [ main:137 ] - [ DEBUG ]  -Dio.netty.allocator.cacheTrimInterval: 8192
+2016-12-22 03:50:55  [ main:142 ] - [ DEBUG ]  -Dio.netty.allocator.type: pooled
+2016-12-22 03:50:55  [ main:143 ] - [ DEBUG ]  -Dio.netty.threadLocalDirectBufferSize: 65536
+2016-12-22 03:50:55  [ main:144 ] - [ DEBUG ]  Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1)
+2016-12-22 03:50:55  [ main:145 ] - [ DEBUG ]  /proc/sys/net/core/somaxconn: 128 (non-existent)
+2016-12-22 03:50:55  [ main:160 ] - [ INFO ]  server start at port 8888
+2016-12-22 03:50:55  [ main:161 ] - [ INFO ]  游戏逻辑线程启动......
+2016-12-22 03:51:06  [ nioEventLoopGroup-1-0:10592 ] - [ DEBUG ]  -Dio.netty.leakDetectionLevel: simple
+2016-12-22 03:51:06  [ nioEventLoopGroup-1-0:10635 ] - [ DEBUG ]  -Dio.netty.recycler.maxCapacity: 262144
+2016-12-22 03:51:06  [ nioEventLoopGroup-1-0:10659 ] - [ DEBUG ]  [id: 0x6907f41c, /0:0:0:0:0:0:0:1:60963 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:51:06  [ nioEventLoopGroup-1-0:10662 ] - [ DEBUG ]  WebSocket version 13 server handshake key: mnyp4liRKh2pjNtKgHaKag==, response: EcOk23AqW9k0Uviz1YURS8HnGsY=
+2016-12-22 03:51:12  [ nioEventLoopGroup-1-1:16997 ] - [ DEBUG ]  [id: 0x6e58ec31, /0:0:0:0:0:0:0:1:60968 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:51:12  [ nioEventLoopGroup-1-1:16998 ] - [ DEBUG ]  WebSocket version 13 server handshake key: zkORXoAMXx5Mcggnm2hf7g==, response: wrvmUSHjxKXiBO6hUHC8BQOTtxY=
+2016-12-22 03:51:15  [ nioEventLoopGroup-1-1:19744 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:51:15  [ nioEventLoopGroup-1-1:19744 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 03:51:15  [ nioEventLoopGroup-1-1:19748 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 03:51:15  [ nioEventLoopGroup-1-1:19748 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:51:15  [ nioEventLoopGroup-1-1:19750 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 03:51:15  [ Thread-0:19770 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 03:51:15  [ Thread-0:19869 ] - [ INFO ]  Connected to SQLite 3.15.1
+2016-12-22 03:51:15  [ nioEventLoopGroup-1-1:19878 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 03:51:15  [ nioEventLoopGroup-1-1:19879 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24318 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24319 ] - [ DEBUG ]  Decoding WebSocket Frame length=44
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24319 ] - [ DEBUG ]  decode : {"op":100,"username":"zhang","password":"1"}
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24320 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24320 ] - [ DEBUG ]  msg is :{"op":100,"username":"zhang","password":"1"}
+2016-12-22 03:51:20  [ Thread-0:24321 ] - [ DEBUG ]  username:zhang,password:1
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24322 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-1:24322 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24322 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=87
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-1:24322 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=93
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24323 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 03:51:20  [ nioEventLoopGroup-1-0:24323 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=92
+2016-12-22 03:52:53  [ nioEventLoopGroup-1-0:117506 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 03:52:53  [ nioEventLoopGroup-1-0:117507 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 03:52:53  [ nioEventLoopGroup-1-0:117507 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 03:52:53  [ nioEventLoopGroup-1-0:117509 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 03:52:53  [ nioEventLoopGroup-1-0:117510 ] - [ DEBUG ]  remove key : zhang
+2016-12-22 03:52:53  [ nioEventLoopGroup-1-0:117510 ] - [ INFO ]  当前在线玩家数量:1
+2016-12-22 03:52:53  [ nioEventLoopGroup-1-1:117669 ] - [ DEBUG ]  [id: 0x3b91294e, /0:0:0:0:0:0:0:1:61003 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:52:53  [ nioEventLoopGroup-1-1:117669 ] - [ DEBUG ]  WebSocket version 13 server handshake key: hYuWSn3VcCyql5SGUziAhw==, response: u52NZKbp2gCA6T3+FM+jQ/pDt3U=
+2016-12-22 03:52:57  [ nioEventLoopGroup-1-2:121351 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 03:52:57  [ nioEventLoopGroup-1-2:121351 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 03:52:57  [ nioEventLoopGroup-1-2:121351 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 03:52:57  [ nioEventLoopGroup-1-2:121352 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 03:52:57  [ nioEventLoopGroup-1-2:121352 ] - [ DEBUG ]  remove key : dai
+2016-12-22 03:52:57  [ nioEventLoopGroup-1-2:121353 ] - [ INFO ]  当前在线玩家数量:0
+2016-12-22 03:52:57  [ nioEventLoopGroup-1-1:121470 ] - [ DEBUG ]  [id: 0x2512bb23, /0:0:0:0:0:0:0:1:61006 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:52:57  [ nioEventLoopGroup-1-1:121471 ] - [ DEBUG ]  WebSocket version 13 server handshake key: LK6Fq5IYH41c2Bh4pMyAtQ==, response: q28rszX7cr0nZCc/UAxQ/pIIdCc=
+2016-12-22 03:53:00  [ nioEventLoopGroup-1-1:124914 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:53:00  [ nioEventLoopGroup-1-1:124915 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 03:53:00  [ nioEventLoopGroup-1-1:124916 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 03:53:00  [ nioEventLoopGroup-1-1:124916 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:53:00  [ nioEventLoopGroup-1-1:124917 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 03:53:00  [ Thread-0:124924 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 03:53:00  [ nioEventLoopGroup-1-1:124925 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 03:53:00  [ nioEventLoopGroup-1-1:124926 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130261 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130262 ] - [ DEBUG ]  Decoding WebSocket Frame length=44
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130262 ] - [ DEBUG ]  decode : {"op":100,"username":"zhang","password":"1"}
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130262 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130262 ] - [ DEBUG ]  msg is :{"op":100,"username":"zhang","password":"1"}
+2016-12-22 03:53:06  [ Thread-0:130271 ] - [ DEBUG ]  username:zhang,password:1
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130273 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-1:130273 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130273 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=87
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-1:130274 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=93
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130274 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 03:53:06  [ nioEventLoopGroup-1-3:130274 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=92
+2016-12-22 03:53:36  [ nioEventLoopGroup-1-2:160995 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 03:53:36  [ nioEventLoopGroup-1-2:160996 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 03:53:36  [ nioEventLoopGroup-1-2:160996 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 03:53:36  [ nioEventLoopGroup-1-2:160997 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 03:53:36  [ nioEventLoopGroup-1-2:160998 ] - [ DEBUG ]  remove key : zhang
+2016-12-22 03:53:36  [ nioEventLoopGroup-1-2:160998 ] - [ INFO ]  当前在线玩家数量:1
+2016-12-22 03:53:36  [ nioEventLoopGroup-1-5:161139 ] - [ DEBUG ]  [id: 0xf6a23828, /0:0:0:0:0:0:0:1:61053 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:53:36  [ nioEventLoopGroup-1-5:161139 ] - [ DEBUG ]  WebSocket version 13 server handshake key: +FyhtI0tWorgRTX0kMls2w==, response: SCdtOooXLu6eFY1+a8+aTdV0kRE=
+2016-12-22 03:53:38  [ nioEventLoopGroup-1-1:162846 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 03:53:38  [ nioEventLoopGroup-1-1:162847 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 03:53:38  [ nioEventLoopGroup-1-1:162847 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 03:53:38  [ nioEventLoopGroup-1-1:162847 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 03:53:38  [ nioEventLoopGroup-1-1:162848 ] - [ DEBUG ]  remove key : dai
+2016-12-22 03:53:38  [ nioEventLoopGroup-1-1:162848 ] - [ INFO ]  当前在线玩家数量:0
+2016-12-22 03:53:38  [ nioEventLoopGroup-1-3:162978 ] - [ DEBUG ]  [id: 0x433c8fcf, /0:0:0:0:0:0:0:1:61054 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:53:38  [ nioEventLoopGroup-1-3:162979 ] - [ DEBUG ]  WebSocket version 13 server handshake key: /yBifFDXEI/96fI5QPD27A==, response: vLUDDkQMXptbKCzdN+6MLnBnIAQ=
+2016-12-22 03:53:41  [ nioEventLoopGroup-1-3:165633 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:53:41  [ nioEventLoopGroup-1-3:165633 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 03:53:41  [ nioEventLoopGroup-1-3:165634 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 03:53:41  [ nioEventLoopGroup-1-3:165634 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:53:41  [ nioEventLoopGroup-1-3:165635 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 03:53:41  [ Thread-0:165655 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 03:53:41  [ nioEventLoopGroup-1-3:165656 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 03:53:41  [ nioEventLoopGroup-1-3:165657 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170768 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170769 ] - [ DEBUG ]  Decoding WebSocket Frame length=44
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170769 ] - [ DEBUG ]  decode : {"op":100,"username":"zhang","password":"1"}
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170770 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170770 ] - [ DEBUG ]  msg is :{"op":100,"username":"zhang","password":"1"}
+2016-12-22 03:53:46  [ Thread-0:170789 ] - [ DEBUG ]  username:zhang,password:1
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170790 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-3:170790 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170790 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=87
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-3:170791 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=93
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170791 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 03:53:46  [ nioEventLoopGroup-1-5:170792 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=92
+2016-12-22 03:53:58  [ nioEventLoopGroup-1-4:182658 ] - [ DEBUG ]  [id: 0x31eb1e44, /0:0:0:0:0:0:0:1:61061 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 03:53:58  [ nioEventLoopGroup-1-4:182659 ] - [ DEBUG ]  WebSocket version 13 server handshake key: dbZVLVKI2VQCdhbUZne1fA==, response: HbO1IvCJMQszfgk7EPoDBN0OHfQ=
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189833 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189834 ] - [ DEBUG ]  Decoding WebSocket Frame length=43
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189834 ] - [ DEBUG ]  decode : {"op":102,"username":"lisi","password":"1"}
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189834 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189835 ] - [ DEBUG ]  msg is :{"op":102,"username":"lisi","password":"1"}
+2016-12-22 03:54:05  [ Thread-0:189846 ] - [ DEBUG ]  username:lisi,password:1
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189853 ] - [ DEBUG ]  encode : {"op":103,"code":1,"u":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-6:189853 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-8:189853 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-6:189853 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189853 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-8:189854 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189854 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"},{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 03:54:05  [ nioEventLoopGroup-1-4:189855 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=156
+2016-12-22 04:06:43  [ main:0 ] - [ DEBUG ]  Using SLF4J as the default logging framework
+2016-12-22 04:06:43  [ main:10 ] - [ DEBUG ]  -Dio.netty.eventLoopThreads: 16
+2016-12-22 04:06:43  [ main:41 ] - [ DEBUG ]  java.nio.Buffer.address: available
+2016-12-22 04:06:43  [ main:43 ] - [ DEBUG ]  sun.misc.Unsafe.theUnsafe: available
+2016-12-22 04:06:43  [ main:44 ] - [ DEBUG ]  sun.misc.Unsafe.copyMemory: available
+2016-12-22 04:06:43  [ main:44 ] - [ DEBUG ]  java.nio.Bits.unaligned: true
+2016-12-22 04:06:43  [ main:45 ] - [ DEBUG ]  Java version: 8
+2016-12-22 04:06:43  [ main:45 ] - [ DEBUG ]  -Dio.netty.noUnsafe: false
+2016-12-22 04:06:43  [ main:45 ] - [ DEBUG ]  sun.misc.Unsafe: available
+2016-12-22 04:06:43  [ main:46 ] - [ DEBUG ]  -Dio.netty.noJavassist: false
+2016-12-22 04:06:43  [ main:47 ] - [ DEBUG ]  Javassist: unavailable
+2016-12-22 04:06:43  [ main:47 ] - [ DEBUG ]  You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2016-12-22 04:06:43  [ main:47 ] - [ DEBUG ]  -Dio.netty.tmpdir: /var/folders/xw/vtl8h6j91fg39k49hv9lkq540000gn/T (java.io.tmpdir)
+2016-12-22 04:06:43  [ main:48 ] - [ DEBUG ]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2016-12-22 04:06:43  [ main:48 ] - [ DEBUG ]  -Dio.netty.noPreferDirect: false
+2016-12-22 04:06:43  [ main:49 ] - [ DEBUG ]  -Dio.netty.noKeySetOptimization: false
+2016-12-22 04:06:43  [ main:50 ] - [ DEBUG ]  -Dio.netty.selectorAutoRebuildThreshold: 512
+2016-12-22 04:06:43  [ main:90 ] - [ DEBUG ]  -Dio.netty.processId: 4780 (auto-detected)
+2016-12-22 04:06:43  [ main:94 ] - [ DEBUG ]  -Dio.netty.machineId: 60:f8:1d:ff:fe:b4:49:b4 (auto-detected)
+2016-12-22 04:06:43  [ main:96 ] - [ DEBUG ]  -Dio.netty.initialSeedUniquifier: 0xbdd0244915a001f7 (took 11 ms)
+2016-12-22 04:06:43  [ main:125 ] - [ DEBUG ]  -Dio.netty.allocator.numHeapArenas: 8
+2016-12-22 04:06:43  [ main:126 ] - [ DEBUG ]  -Dio.netty.allocator.numDirectArenas: 8
+2016-12-22 04:06:43  [ main:126 ] - [ DEBUG ]  -Dio.netty.allocator.pageSize: 8192
+2016-12-22 04:06:43  [ main:126 ] - [ DEBUG ]  -Dio.netty.allocator.maxOrder: 11
+2016-12-22 04:06:43  [ main:126 ] - [ DEBUG ]  -Dio.netty.allocator.chunkSize: 16777216
+2016-12-22 04:06:43  [ main:126 ] - [ DEBUG ]  -Dio.netty.allocator.tinyCacheSize: 512
+2016-12-22 04:06:43  [ main:127 ] - [ DEBUG ]  -Dio.netty.allocator.smallCacheSize: 256
+2016-12-22 04:06:43  [ main:127 ] - [ DEBUG ]  -Dio.netty.allocator.normalCacheSize: 64
+2016-12-22 04:06:43  [ main:127 ] - [ DEBUG ]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2016-12-22 04:06:43  [ main:127 ] - [ DEBUG ]  -Dio.netty.allocator.cacheTrimInterval: 8192
+2016-12-22 04:06:43  [ main:132 ] - [ DEBUG ]  -Dio.netty.allocator.type: pooled
+2016-12-22 04:06:43  [ main:132 ] - [ DEBUG ]  -Dio.netty.threadLocalDirectBufferSize: 65536
+2016-12-22 04:06:43  [ main:134 ] - [ DEBUG ]  Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1)
+2016-12-22 04:06:43  [ main:134 ] - [ DEBUG ]  /proc/sys/net/core/somaxconn: 128 (non-existent)
+2016-12-22 04:06:43  [ main:148 ] - [ INFO ]  server start at port 8888
+2016-12-22 04:06:43  [ main:149 ] - [ INFO ]  游戏逻辑线程启动......
+2016-12-22 04:07:00  [ nioEventLoopGroup-1-0:17233 ] - [ DEBUG ]  -Dio.netty.leakDetectionLevel: simple
+2016-12-22 04:07:00  [ nioEventLoopGroup-1-0:17279 ] - [ DEBUG ]  -Dio.netty.recycler.maxCapacity: 262144
+2016-12-22 04:07:00  [ nioEventLoopGroup-1-0:17303 ] - [ DEBUG ]  [id: 0x19f0a420, /0:0:0:0:0:0:0:1:61474 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:07:00  [ nioEventLoopGroup-1-0:17306 ] - [ DEBUG ]  WebSocket version 13 server handshake key: ALrLTxA6ua/uLIFVnEmbXQ==, response: 290Zs+AFXOwzMCmLs51UhU/cv6Y=
+2016-12-22 04:07:05  [ nioEventLoopGroup-1-0:22268 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:07:05  [ nioEventLoopGroup-1-0:22269 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 04:07:05  [ nioEventLoopGroup-1-0:22272 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 04:07:05  [ nioEventLoopGroup-1-0:22273 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:07:05  [ nioEventLoopGroup-1-0:22274 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 04:07:05  [ Thread-0:22292 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 04:07:05  [ Thread-0:22388 ] - [ INFO ]  Connected to SQLite 3.15.1
+2016-12-22 04:07:05  [ nioEventLoopGroup-1-0:22396 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 04:07:05  [ nioEventLoopGroup-1-0:22397 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 04:07:07  [ nioEventLoopGroup-1-1:24431 ] - [ DEBUG ]  [id: 0xd040f041, /0:0:0:0:0:0:0:1:61480 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:07:07  [ nioEventLoopGroup-1-1:24431 ] - [ DEBUG ]  WebSocket version 13 server handshake key: QORzHRFtnpzDWNTUz4bjZw==, response: o9Sfe28pJWb4LGUAOeIMsvfvyBk=
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28563 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28563 ] - [ DEBUG ]  Decoding WebSocket Frame length=44
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28564 ] - [ DEBUG ]  decode : {"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28564 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28565 ] - [ DEBUG ]  msg is :{"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:07:11  [ Thread-0:28570 ] - [ DEBUG ]  username:zhang,password:1
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28572 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-0:28572 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28573 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=87
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-0:28573 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=93
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28573 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 04:07:11  [ nioEventLoopGroup-1-1:28574 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=92
+2016-12-22 04:07:13  [ nioEventLoopGroup-1-2:30304 ] - [ DEBUG ]  [id: 0x983535af, /0:0:0:0:0:0:0:1:61482 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:07:13  [ nioEventLoopGroup-1-2:30305 ] - [ DEBUG ]  WebSocket version 13 server handshake key: YDvMZ+6NGFNWZ8020994pA==, response: eB097bw3XSIHKc4TJNMMFkzu0BE=
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33443 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33444 ] - [ DEBUG ]  Decoding WebSocket Frame length=43
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33444 ] - [ DEBUG ]  decode : {"op":100,"username":"lisi","password":"1"}
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33445 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33445 ] - [ DEBUG ]  msg is :{"op":100,"username":"lisi","password":"1"}
+2016-12-22 04:07:16  [ Thread-0:33452 ] - [ DEBUG ]  username:lisi,password:1
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33454 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-0:33454 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33454 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-1:33454 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-0:33454 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-1:33455 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33455 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"},{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 04:07:16  [ nioEventLoopGroup-1-2:33458 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=156
+2016-12-22 04:07:23  [ nioEventLoopGroup-1-3:39886 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 04:07:23  [ nioEventLoopGroup-1-3:39886 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 04:07:23  [ nioEventLoopGroup-1-3:39887 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 04:07:23  [ nioEventLoopGroup-1-3:39889 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 04:07:23  [ nioEventLoopGroup-1-0:39889 ] - [ DEBUG ]  encode : {"op":106,"username":"zhang"}
+2016-12-22 04:07:23  [ nioEventLoopGroup-1-4:39889 ] - [ DEBUG ]  encode : {"op":106,"username":"zhang"}
+2016-12-22 04:07:23  [ nioEventLoopGroup-1-0:39890 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=29
+2016-12-22 04:07:23  [ nioEventLoopGroup-1-4:39890 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=29
+2016-12-22 04:10:15  [ nioEventLoopGroup-1-3:212163 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 04:10:15  [ nioEventLoopGroup-1-3:212164 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 04:10:15  [ nioEventLoopGroup-1-3:212164 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 04:10:15  [ nioEventLoopGroup-1-3:212164 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 04:10:15  [ nioEventLoopGroup-1-2:212165 ] - [ DEBUG ]  encode : {"op":106,"username":"dai"}
+2016-12-22 04:10:15  [ nioEventLoopGroup-1-2:212165 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=27
+2016-12-22 04:10:15  [ nioEventLoopGroup-1-1:212324 ] - [ DEBUG ]  [id: 0x73af43ff, /0:0:0:0:0:0:0:1:61866 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:10:15  [ nioEventLoopGroup-1-1:212325 ] - [ DEBUG ]  WebSocket version 13 server handshake key: GLszf3TjMoMeyAIXXwcxRg==, response: NARLrM8zOX/PurkPuMonmGURLJQ=
+2016-12-22 04:10:22  [ nioEventLoopGroup-1-2:219531 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 04:10:22  [ nioEventLoopGroup-1-2:219532 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 04:10:22  [ nioEventLoopGroup-1-2:219532 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 04:10:22  [ nioEventLoopGroup-1-2:219533 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 04:10:22  [ nioEventLoopGroup-1-4:219671 ] - [ DEBUG ]  [id: 0x50ccf0ad, /0:0:0:0:0:0:0:1:61869 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:10:22  [ nioEventLoopGroup-1-4:219672 ] - [ DEBUG ]  WebSocket version 13 server handshake key: Z0o0NqxunmUlMMYinUTTLA==, response: MJAzvJq7JtpRUYWLn23PV6vWARA=
+2016-12-22 04:10:26  [ nioEventLoopGroup-1-1:222979 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:10:26  [ nioEventLoopGroup-1-1:222980 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 04:10:26  [ nioEventLoopGroup-1-1:222981 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 04:10:26  [ nioEventLoopGroup-1-1:222981 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:10:26  [ nioEventLoopGroup-1-1:222982 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 04:10:26  [ Thread-0:223000 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 04:10:26  [ nioEventLoopGroup-1-1:223001 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 04:10:26  [ nioEventLoopGroup-1-1:223001 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 04:10:29  [ nioEventLoopGroup-1-3:226546 ] - [ DEBUG ]  [id: 0x9a733cfd, /0:0:0:0:0:0:0:1:61872 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:10:29  [ nioEventLoopGroup-1-3:226547 ] - [ DEBUG ]  WebSocket version 13 server handshake key: hdm5CdTTq9XVjH+m0LI/YQ==, response: mWLXcY75lhK+hV+nLuhPChg4VIQ=
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230404 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230405 ] - [ DEBUG ]  Decoding WebSocket Frame length=44
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230405 ] - [ DEBUG ]  decode : {"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230406 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230406 ] - [ DEBUG ]  msg is :{"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:10:33  [ Thread-0:230418 ] - [ DEBUG ]  username:zhang,password:1
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230420 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-1:230420 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230420 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=87
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-1:230421 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=93
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230421 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 04:10:33  [ nioEventLoopGroup-1-3:230422 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=92
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234963 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234963 ] - [ DEBUG ]  Decoding WebSocket Frame length=43
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234964 ] - [ DEBUG ]  decode : {"op":100,"username":"lisi","password":"1"}
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234964 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234965 ] - [ DEBUG ]  msg is :{"op":100,"username":"lisi","password":"1"}
+2016-12-22 04:10:38  [ Thread-0:234982 ] - [ DEBUG ]  username:lisi,password:1
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234983 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-3:234983 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-1:234983 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-3:234984 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234984 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-1:234984 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234985 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"},{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 04:10:38  [ nioEventLoopGroup-1-4:234985 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=156
+2016-12-22 04:10:42  [ nioEventLoopGroup-1-5:238978 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 04:10:42  [ nioEventLoopGroup-1-5:238978 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 04:10:42  [ nioEventLoopGroup-1-5:238979 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 04:10:42  [ nioEventLoopGroup-1-5:238979 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 04:10:42  [ nioEventLoopGroup-1-4:238980 ] - [ DEBUG ]  encode : {"op":106,"username":"zhang"}
+2016-12-22 04:10:42  [ nioEventLoopGroup-1-1:238980 ] - [ DEBUG ]  encode : {"op":106,"username":"zhang"}
+2016-12-22 04:10:42  [ nioEventLoopGroup-1-4:238980 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=29
+2016-12-22 04:10:42  [ nioEventLoopGroup-1-1:238980 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=29
+2016-12-22 04:20:28  [ main:0 ] - [ DEBUG ]  Using SLF4J as the default logging framework
+2016-12-22 04:20:28  [ main:11 ] - [ DEBUG ]  -Dio.netty.eventLoopThreads: 16
+2016-12-22 04:20:29  [ main:43 ] - [ DEBUG ]  java.nio.Buffer.address: available
+2016-12-22 04:20:29  [ main:45 ] - [ DEBUG ]  sun.misc.Unsafe.theUnsafe: available
+2016-12-22 04:20:29  [ main:45 ] - [ DEBUG ]  sun.misc.Unsafe.copyMemory: available
+2016-12-22 04:20:29  [ main:45 ] - [ DEBUG ]  java.nio.Bits.unaligned: true
+2016-12-22 04:20:29  [ main:46 ] - [ DEBUG ]  Java version: 8
+2016-12-22 04:20:29  [ main:46 ] - [ DEBUG ]  -Dio.netty.noUnsafe: false
+2016-12-22 04:20:29  [ main:46 ] - [ DEBUG ]  sun.misc.Unsafe: available
+2016-12-22 04:20:29  [ main:47 ] - [ DEBUG ]  -Dio.netty.noJavassist: false
+2016-12-22 04:20:29  [ main:47 ] - [ DEBUG ]  Javassist: unavailable
+2016-12-22 04:20:29  [ main:48 ] - [ DEBUG ]  You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2016-12-22 04:20:29  [ main:48 ] - [ DEBUG ]  -Dio.netty.tmpdir: /var/folders/xw/vtl8h6j91fg39k49hv9lkq540000gn/T (java.io.tmpdir)
+2016-12-22 04:20:29  [ main:49 ] - [ DEBUG ]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2016-12-22 04:20:29  [ main:49 ] - [ DEBUG ]  -Dio.netty.noPreferDirect: false
+2016-12-22 04:20:29  [ main:50 ] - [ DEBUG ]  -Dio.netty.noKeySetOptimization: false
+2016-12-22 04:20:29  [ main:51 ] - [ DEBUG ]  -Dio.netty.selectorAutoRebuildThreshold: 512
+2016-12-22 04:20:29  [ main:91 ] - [ DEBUG ]  -Dio.netty.processId: 4795 (auto-detected)
+2016-12-22 04:20:29  [ main:95 ] - [ DEBUG ]  -Dio.netty.machineId: 60:f8:1d:ff:fe:b4:49:b4 (auto-detected)
+2016-12-22 04:20:29  [ main:96 ] - [ DEBUG ]  -Dio.netty.initialSeedUniquifier: 0xdf6e79cbc27dbf3f (took 11 ms)
+2016-12-22 04:20:29  [ main:129 ] - [ DEBUG ]  -Dio.netty.allocator.numHeapArenas: 8
+2016-12-22 04:20:29  [ main:129 ] - [ DEBUG ]  -Dio.netty.allocator.numDirectArenas: 8
+2016-12-22 04:20:29  [ main:129 ] - [ DEBUG ]  -Dio.netty.allocator.pageSize: 8192
+2016-12-22 04:20:29  [ main:129 ] - [ DEBUG ]  -Dio.netty.allocator.maxOrder: 11
+2016-12-22 04:20:29  [ main:130 ] - [ DEBUG ]  -Dio.netty.allocator.chunkSize: 16777216
+2016-12-22 04:20:29  [ main:130 ] - [ DEBUG ]  -Dio.netty.allocator.tinyCacheSize: 512
+2016-12-22 04:20:29  [ main:130 ] - [ DEBUG ]  -Dio.netty.allocator.smallCacheSize: 256
+2016-12-22 04:20:29  [ main:130 ] - [ DEBUG ]  -Dio.netty.allocator.normalCacheSize: 64
+2016-12-22 04:20:29  [ main:130 ] - [ DEBUG ]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2016-12-22 04:20:29  [ main:131 ] - [ DEBUG ]  -Dio.netty.allocator.cacheTrimInterval: 8192
+2016-12-22 04:20:29  [ main:136 ] - [ DEBUG ]  -Dio.netty.allocator.type: pooled
+2016-12-22 04:20:29  [ main:136 ] - [ DEBUG ]  -Dio.netty.threadLocalDirectBufferSize: 65536
+2016-12-22 04:20:29  [ main:138 ] - [ DEBUG ]  Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1)
+2016-12-22 04:20:29  [ main:138 ] - [ DEBUG ]  /proc/sys/net/core/somaxconn: 128 (non-existent)
+2016-12-22 04:20:29  [ main:152 ] - [ INFO ]  server start at port 8888
+2016-12-22 04:20:29  [ main:155 ] - [ INFO ]  游戏逻辑线程启动......
+2016-12-22 04:20:35  [ nioEventLoopGroup-1-0:6434 ] - [ DEBUG ]  -Dio.netty.leakDetectionLevel: simple
+2016-12-22 04:20:35  [ nioEventLoopGroup-1-0:6477 ] - [ DEBUG ]  -Dio.netty.recycler.maxCapacity: 262144
+2016-12-22 04:20:35  [ nioEventLoopGroup-1-0:6501 ] - [ DEBUG ]  [id: 0xd0e7312c, /0:0:0:0:0:0:0:1:62148 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:20:35  [ nioEventLoopGroup-1-0:6505 ] - [ DEBUG ]  WebSocket version 13 server handshake key: fxaeBrQfJub9WJV8CWWG2g==, response: Qv5HuMgAeyZyNcDAzV1W4KI4k9M=
+2016-12-22 04:20:37  [ nioEventLoopGroup-1-0:9011 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:20:37  [ nioEventLoopGroup-1-0:9011 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 04:20:37  [ nioEventLoopGroup-1-0:9015 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 04:20:37  [ nioEventLoopGroup-1-0:9015 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:20:37  [ nioEventLoopGroup-1-0:9017 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 04:20:37  [ Thread-0:9035 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 04:20:38  [ Thread-0:9133 ] - [ INFO ]  Connected to SQLite 3.15.1
+2016-12-22 04:20:38  [ nioEventLoopGroup-1-0:9140 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 04:20:38  [ nioEventLoopGroup-1-0:9142 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 04:20:42  [ nioEventLoopGroup-1-1:13978 ] - [ DEBUG ]  [id: 0x214153a1, /0:0:0:0:0:0:0:1:62154 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:20:42  [ nioEventLoopGroup-1-1:13979 ] - [ DEBUG ]  WebSocket version 13 server handshake key: EC0YBKyUv+BWkm71wi1L4A==, response: Obe1h76TRruNkmJGNgU2nkUK7Q4=
+2016-12-22 04:20:46  [ nioEventLoopGroup-1-2:17304 ] - [ DEBUG ]  [id: 0xe3c052f8, /0:0:0:0:0:0:0:1:62157 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:20:46  [ nioEventLoopGroup-1-2:17304 ] - [ DEBUG ]  WebSocket version 13 server handshake key: Om9Vh2BzwnAxXMgTSUWJZw==, response: 1Nafj5zcUyuiJNAH1qRmoO8P0sM=
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21521 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21522 ] - [ DEBUG ]  Decoding WebSocket Frame length=44
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21522 ] - [ DEBUG ]  decode : {"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21523 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21523 ] - [ DEBUG ]  msg is :{"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:20:50  [ Thread-0:21525 ] - [ DEBUG ]  username:zhang,password:1
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21526 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-0:21526 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21526 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=87
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-0:21527 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=93
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21527 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 04:20:50  [ nioEventLoopGroup-1-1:21528 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=92
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:26988 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:26989 ] - [ DEBUG ]  Decoding WebSocket Frame length=44
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:26989 ] - [ DEBUG ]  decode : {"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:26989 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:26989 ] - [ DEBUG ]  msg is :{"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:20:55  [ Thread-0:26999 ] - [ DEBUG ]  username:zhang,password:1
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-1:27000 ] - [ DEBUG ]  encode : {"op":107}
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:27001 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-0:27001 ] - [ DEBUG ]  encode : {"op":106,"username":"zhang"}
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:27002 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=87
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-1:27001 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=10
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-0:27002 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=29
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:27003 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-0:27004 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-0:27004 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=93
+2016-12-22 04:20:55  [ nioEventLoopGroup-1-3:27004 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=92
+2016-12-22 04:21:53  [ nioEventLoopGroup-1-2:84132 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 04:21:53  [ nioEventLoopGroup-1-2:84133 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 04:21:53  [ nioEventLoopGroup-1-2:84134 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 04:21:53  [ nioEventLoopGroup-1-2:84136 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 04:21:53  [ nioEventLoopGroup-1-6:84136 ] - [ DEBUG ]  encode : {"op":106,"username":"dai"}
+2016-12-22 04:21:53  [ nioEventLoopGroup-1-6:84137 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=27
+2016-12-22 04:21:53  [ nioEventLoopGroup-1-0:84293 ] - [ DEBUG ]  [id: 0x85b0c6c8, /0:0:0:0:0:0:0:1:62189 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:21:53  [ nioEventLoopGroup-1-0:84294 ] - [ DEBUG ]  WebSocket version 13 server handshake key: 9BcsbFxWF3v08md5II5abg==, response: bEILNrU3cQ4NsV2DShXtDk0/Dgs=
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87150 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87150 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87151 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87151 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87151 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 04:21:56  [ Thread-0:87166 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87166 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-6:87166 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87167 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-6:87167 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87167 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}]}
+2016-12-22 04:21:56  [ nioEventLoopGroup-1-0:87168 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=94
+2016-12-22 04:22:00  [ nioEventLoopGroup-1-1:91586 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 04:22:00  [ nioEventLoopGroup-1-1:91586 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 04:22:00  [ nioEventLoopGroup-1-1:91586 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 04:22:00  [ nioEventLoopGroup-1-1:91587 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 04:22:00  [ nioEventLoopGroup-1-3:91719 ] - [ DEBUG ]  [id: 0x1daf0ce2, /0:0:0:0:0:0:0:1:62193 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:22:00  [ nioEventLoopGroup-1-3:91719 ] - [ DEBUG ]  WebSocket version 13 server handshake key: Gww64UXpGbEQ1mt8O5dFIw==, response: 6K4+BgR4pZ9b4PZkqpAEDE6W9YI=
+2016-12-22 04:22:02  [ nioEventLoopGroup-1-6:93788 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=8
+2016-12-22 04:22:02  [ nioEventLoopGroup-1-6:93788 ] - [ DEBUG ]  Decoding WebSocket Frame length=2
+2016-12-22 04:22:02  [ nioEventLoopGroup-1-6:93789 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=8 length=2
+2016-12-22 04:22:02  [ nioEventLoopGroup-1-6:93789 ] - [ DEBUG ]  有玩家离线!
+2016-12-22 04:22:02  [ nioEventLoopGroup-1-0:93790 ] - [ DEBUG ]  encode : {"op":106,"username":"zhang"}
+2016-12-22 04:22:02  [ nioEventLoopGroup-1-0:93790 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=29
+2016-12-22 04:22:02  [ nioEventLoopGroup-1-3:93922 ] - [ DEBUG ]  [id: 0xf7886dd7, /0:0:0:0:0:0:0:1:62194 => /0:0:0:0:0:0:0:1:8888] WebSocket version V13 server handshake
+2016-12-22 04:22:02  [ nioEventLoopGroup-1-3:93923 ] - [ DEBUG ]  WebSocket version 13 server handshake key: CQkt7MXNiF8TV7TD2soTyg==, response: IT83PFFn2OSd4sqgdKI6CR8Ntq4=
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97096 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97096 ] - [ DEBUG ]  Decoding WebSocket Frame length=44
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97097 ] - [ DEBUG ]  decode : {"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97097 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97097 ] - [ DEBUG ]  msg is :{"op":100,"username":"zhang","password":"1"}
+2016-12-22 04:22:06  [ Thread-0:97108 ] - [ DEBUG ]  username:zhang,password:1
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97110 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-0:97110 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}}
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97110 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=87
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-0:97111 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=93
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97112 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 04:22:06  [ nioEventLoopGroup-1-5:97112 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=92
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100454 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100454 ] - [ DEBUG ]  Decoding WebSocket Frame length=42
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100455 ] - [ DEBUG ]  decode : {"op":100,"username":"dai","password":"1"}
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100455 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100456 ] - [ DEBUG ]  msg is :{"op":100,"username":"dai","password":"1"}
+2016-12-22 04:22:09  [ Thread-0:100472 ] - [ DEBUG ]  username:dai,password:1
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-0:100473 ] - [ DEBUG ]  encode : {"op":107}
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100473 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-4:100473 ] - [ DEBUG ]  encode : {"op":106,"username":"dai"}
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100473 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-0:100473 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=10
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100474 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"}]}
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-4:100474 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=27
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-3:100474 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=94
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-4:100487 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}}
+2016-12-22 04:22:09  [ nioEventLoopGroup-1-4:100488 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118783 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118783 ] - [ DEBUG ]  Decoding WebSocket Frame length=43
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118784 ] - [ DEBUG ]  decode : {"op":100,"username":"lisi","password":"1"}
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118784 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118784 ] - [ DEBUG ]  msg is :{"op":100,"username":"lisi","password":"1"}
+2016-12-22 04:22:27  [ Thread-0:118794 ] - [ DEBUG ]  username:lisi,password:1
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118795 ] - [ DEBUG ]  encode : {"op":101,"code":1,"u":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-5:118795 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-4:118795 ] - [ DEBUG ]  encode : {"op":104,"code":1,"newUser":{"def":471,"x":471,"y":72,"atk":471,"lv":1,"username":"lisi"}}
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-5:118795 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118795 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=85
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-4:118796 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=91
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118797 ] - [ DEBUG ]  encode : {"op":105,"code":1,"others":[{"def":351,"x":351,"y":202,"atk":351,"lv":1,"username":"zhang"},{"def":100,"x":100,"y":100,"atk":100,"lv":1,"username":"dai"}]}
+2016-12-22 04:22:27  [ nioEventLoopGroup-1-0:118797 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=156
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131295 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131295 ] - [ DEBUG ]  Decoding WebSocket Frame length=67
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131296 ] - [ DEBUG ]  decode : {"op":200,"mdir":{"x":-0.998802079557052,"y":-0.04893266672181523}}
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131296 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131296 ] - [ DEBUG ]  msg is :{"op":200,"mdir":{"x":-0.998802079557052,"y":-0.04893266672181523}}
+2016-12-22 04:22:40  [ Thread-0:131300 ] - [ DEBUG ]  发送的消息:{"op":201,"mdir":{"x":-0.998802079557052,"y":-0.04893266672181523},"code":1}
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131301 ] - [ DEBUG ]  encode : {"op":201,"mdir":{"x":-0.998802079557052,"y":-0.04893266672181523},"code":1}
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131301 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=76
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131404 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131404 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131404 ] - [ DEBUG ]  decode : {"op":202}
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131405 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131405 ] - [ DEBUG ]  msg is :{"op":202}
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131411 ] - [ DEBUG ]  encode : {"op":203,"code":1}
+2016-12-22 04:22:40  [ nioEventLoopGroup-1-0:131411 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19
+2016-12-22 04:22:41  [ nioEventLoopGroup-1-5:132646 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:22:41  [ nioEventLoopGroup-1-5:132647 ] - [ DEBUG ]  Decoding WebSocket Frame length=69
+2016-12-22 04:22:41  [ nioEventLoopGroup-1-5:132648 ] - [ DEBUG ]  decode : {"op":200,"mdir":{"x":-0.9982108103659877,"y":-0.059792792780386024}}
+2016-12-22 04:22:41  [ nioEventLoopGroup-1-5:132648 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:22:41  [ nioEventLoopGroup-1-5:132648 ] - [ DEBUG ]  msg is :{"op":200,"mdir":{"x":-0.9982108103659877,"y":-0.059792792780386024}}
+2016-12-22 04:22:41  [ Thread-0:132663 ] - [ DEBUG ]  发送的消息:{"op":201,"mdir":{"x":-0.9982108103659877,"y":-0.059792792780386024},"code":1}
+2016-12-22 04:22:41  [ nioEventLoopGroup-1-5:132664 ] - [ DEBUG ]  encode : {"op":201,"mdir":{"x":-0.9982108103659877,"y":-0.059792792780386024},"code":1}
+2016-12-22 04:22:41  [ nioEventLoopGroup-1-5:132664 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=78
+2016-12-22 04:22:42  [ nioEventLoopGroup-1-7:133844 ] - [ DEBUG ]  Decoding WebSocket Frame opCode=1
+2016-12-22 04:22:42  [ nioEventLoopGroup-1-7:133845 ] - [ DEBUG ]  Decoding WebSocket Frame length=10
+2016-12-22 04:22:42  [ nioEventLoopGroup-1-7:133845 ] - [ DEBUG ]  decode : {"op":202}
+2016-12-22 04:22:42  [ nioEventLoopGroup-1-7:133845 ] - [ DEBUG ]  messageReceived called!
+2016-12-22 04:22:42  [ nioEventLoopGroup-1-7:133845 ] - [ DEBUG ]  msg is :{"op":202}
+2016-12-22 04:22:42  [ nioEventLoopGroup-1-7:133870 ] - [ DEBUG ]  encode : {"op":203,"code":1}
+2016-12-22 04:22:42  [ nioEventLoopGroup-1-7:133871 ] - [ DEBUG ]  Encoding WebSocket Frame opCode=1 length=19

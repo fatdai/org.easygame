@@ -59,8 +59,8 @@ public class OnlineUserMap {
 			}
 		}
 	}
-	
-	public void remove(String key){
+
+	public void remove(String key) {
 		map.remove(key);
 	}
 
@@ -100,14 +100,41 @@ public class OnlineUserMap {
 			newUser.getChannel().writeAndFlush(ret.toString());
 		}
 	}
-	
-	public void broadcastUserLeaveGame(User user){
+
+	public void broadcastUserLeaveGame(User user) {
 		JSONObject ret = new JSONObject();
 		ret.put(Constants.JK_OP, Constants.OP_OTHER_LEAVE);
 		ret.put(Constants.JK_USERNAME, user.getUsername());
-		
+
 		for (Entry<String, User> entry : map.entrySet()) {
 			entry.getValue().getChannel().writeAndFlush(ret.toString());
+		}
+	}
+
+	public void updateUser() {
+		for (Entry<String, User> entry : map.entrySet()) {
+			entry.getValue().update();
+		}
+	}
+
+	public void broadData() {
+		JSONObject ret = new JSONObject();
+		JSONArray array = new JSONArray();
+		int counter = 0;
+		for (Entry<String, User> entry : map.entrySet()) {
+			User user = entry.getValue();
+			user.time = GameLogic.kLag + System.currentTimeMillis();
+			// 要广播哪些数据?
+			// 只广播动的东西? 还是广播所有东西?
+			array.put(counter, user.genUserState());
+			++counter;
+		}
+		ret.put("userstate", array);
+		ret.put("op", "alldata");
+
+		for (Entry<String, User> entry : map.entrySet()) {
+			User user = entry.getValue();
+			user.getChannel().writeAndFlush(ret.toString());
 		}
 	}
 }

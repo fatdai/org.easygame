@@ -45,6 +45,9 @@ public class Constants {
 	// move
 	public static final String JK_MOVE_DIR = "mdir";
 	
+	public static final String JK_INPUT = "input"; // 输入
+	public static final String JK_TIME = "lag"; // 时间
+	
 	//##############################################
 	// code
 	public static final int SUCCESS = 1;

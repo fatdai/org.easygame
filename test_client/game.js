@@ -6,14 +6,13 @@ var canvasWidth,canvasHeight;
 
 
 var others = []; // 其他在线的玩家
+var pendingInput = [];
+var recvMsg = [];
 
-// 控制按钮
-// var upBtn;
-// var downBtn;
-// var leftBtn;
-// var rightBtn;
+var curFrame = 0;  // 当前多少帧
 
-var moving = false;
+var validMouseDown = false; // 有效的mousedown
+var lag = 150; // 这里假设延迟为 150ms
 
 // 开始游戏
 function startGame(obj){
@@ -27,20 +26,111 @@ function startGame(obj){
 	canvas.addEventListener('mouseup',mouseup,false);
 	window.addEventListener("keydown",keydown,true);
 
-	// initBtns();
-
 	player = new Player(obj[Constants.JK_USER]);
 	then = Date.now();
 	gameLoop();
 }	
 
 
-// function initBtns(){
-// 	upBtn = new Button({x:60,y:canvasHeight-25,text:"上"});
-// 	downBtn = new Button({x:180,y:canvasHeight-25,text:"下"});
-// 	leftBtn = new Button({x:300,y:canvasHeight-25,text:"左"});
-// 	rightBtn = new Button({x:420,y:canvasHeight-25,text:"右"});
-// }
+function gameLoop(){
+
+	processServerMsg();
+
+	var now = Date.now();
+	var delta = now - then;
+
+	update(delta/1000);
+	render();
+	then = now;
+
+	++curFrame;
+
+	requestAnimationFrame(gameLoop);
+}
+
+function getUser(name) {
+	for(var i = 0; i < others.length; ++i){
+		if (others[i].name == name) {
+			return others[i];
+		}
+	}
+}
+
+// 获取当前需要被执行的 input
+function getProcessedMsg(){
+	for(var i = 0; i < recvMsg.length;i++){
+		if (recvMsg[i].time <= Date.now() ) {
+			var msg = recvMsg[i];
+			recvMsg.remove(i);
+			return msg;
+		}
+	}
+}
+
+// 处理服务端的消息
+function processServerMsg(){
+
+	while(true){
+		var state = getProcessedMsg();
+		if (!state) {
+			break;
+		}
+
+		console.log("-----state:",state);
+		if (state.username == player.name) {
+
+			// 当前角色
+			player.moving = (state.moving == 1?true:false);
+			player.mx = state.dir.dx;
+			player.my = state.dir.dy;
+
+			// 继续模拟未处理的输入
+			var j = 0;
+			while( j < pendingInput.length){
+				var input = pendingInput[j];
+				if (input.frame <= state.frame) {
+
+					console.log("服务器已经处理....");
+					// 服务器已经处理
+					pendingInput.remove(j);
+
+					// 其他玩家应该计算一个更快的速度移动到指定位置
+				}else{
+					console.log("继续模拟....");
+					player.applyInput(input);
+					j++;
+				}
+			}
+		}else{
+			// 处理其他用户
+			var tmp = getUser(state.username);
+			console.log("tmp:",tmp);
+			if (!tmp) {
+				return;
+			}
+			tmp.moving = state.moving;
+			tmp.mx = state.dir.dx;
+			tmp.my = state.dir.dy;
+
+			// 继续模拟未处理的输入
+			var j = 0;
+			while( j < pendingInput.length){
+				var input = pendingInput[j];
+				if (input.frame <= state.frame) {
+					// 服务器已经处理
+					pendingInput.remove(j);
+
+					// 其他玩家应该计算一个更快的速度移动到指定位置
+				}else{
+					tmp.applyInput(input);
+					j++;
+				}
+			}
+
+		}
+	}
+}
+
 
 function mousedown(e){
 	console.log("mouse down!");	
@@ -49,42 +139,58 @@ function mousedown(e){
 	// 在有效区域内 就shoot
 	if (point.x >= 0 && point.x <= canvasWidth && point.y >=0 && point.y <= canvasHeight) {
 
-		// 移动的方向为
-		// var x  = point.x - player.x;
-		// var y = point.y - player.y;
-		// var len = Math.sqrt(x*x+y*y);
-		// x = x/len;
-		// y = y/len;
-		// move({x,y});
+		var x = point.x - player.x;
+		var y = point.y - player.y;
+		var len = Math.sqrt(x*x+y*y);
+		var dx = x/len;
+		var dy = y/len;
 
 		// 组装成一个 input
-		var obj = {};
-		obj.type = "mousedown";
-		obj.x = parseInt(point.x);
-		obj.y = parseInt(point.y);
-		obj.frame = Math.max(curFrame,keyFrame);
-		obj.name = player.name;
-		inputArray.push(new NetInput(obj));
+		var input = {};
+		input.type = "startmove";  // 输入名字
+		input.dir = {dx:dx,dy:dy};
+		input.name = player.name;
+		input.frame = curFrame;
+
+		// 发给服务器
+		sendInput(input);
+
+		// 客户端开始模拟
+		player.applyInput(input);
+
+		pendingInput.push(input);
+
+		validMouseDown = true;
 	}
 }
 
-function mouseup(e){
-
-	// if (moving) {
-	// 	// stop move
-	// 	var obj = {};
-	// 	obj[Constants.JK_OP] = Constants.OP_STOP_MOVE;
-	// 	ws.send(JSON.stringify(obj));
-
-	// 	moving = false;
-	// }
-	
-	// 组装成一个 input
+function sendInput(input) {
 	var obj = {};
-	obj.type = "mouseup";
-	obj.frame = Math.max(curFrame,keyFrame);
-	obj.name = player.name;
-	inputArray.push(new NetInput(obj));
+	obj[Constants.JK_OP] = Constants.OP_INPUTS; // 输入
+	obj[Constants.JK_INPUT] = input;
+	obj[Constants.JK_TIME] = Date.now() + lag; // 暂时不处理
+	ws.send(JSON.stringify(obj));
+}
+
+
+function mouseup(e){
+	if (validMouseDown) {
+		// 组装成一个 input
+		var input = {};
+		input.type = "endmove";
+		input.frame = curFrame;
+		input.name = player.name;
+
+		// 发给服务器
+		sendInput(input);
+
+		// 客户端开始模拟
+		player.applyInput(input);
+
+		pendingInput.push(input);
+
+		validMouseDown = false;
+	}
 }
 
 
@@ -125,103 +231,6 @@ function getPointOnCanvas(x,y){
 }
 
 
-// 游戏主循环
-// 简单的按照5帧当作一个关键帧
-var curFrame = 0;
-var keyFrame = 5;
-var recvInputArray = []; // 接受的输入事件
-var inputArray = []; // 当前客户端的输入事件
-// var waitTime = 0;
-function lockStep(){
-
-	// 如果当前是关键帧
-	if (curFrame == keyFrame) {
-		// 查看是否有服务器的更新包，当前关键帧编号，下一关键帧编号，所有玩家的控制信息
-    	// 获取更新包
-    	var curInput;
-    	for (var i = 0; i < recvInputArray.length; i++) {
-    		if (recvInputArray[i].frame == keyFrame) {
-    			curInput = recvInputArray[i];
-    			// 从数组里面删除
-    			recvInputArray.remove(i);
-    			break;
-    		}
-    	}
-
-    	// 如果等不到当前帧的控制数据，则返回
-    	if (curInput && curInput.frame == keyFrame) {
-    		var nextFrame = keyFrame + 5;
-
- 			console.log("准备发送这一波收集到的输入事件!");
-    		// 采集当前的输入当作包发送
-    		var obj = {};
-    		obj[Constants.JK_OP] = Constants.OP_INPUTS;
-    		obj.inputs = inputArray;
-    		ws.send(JSON.stringify(obj));
-
-    		console.log("开始模拟运动!");
-    		// 开始模拟
-    		// 怎么知道是哪个player在运动???
-    		if (curInput.type == "mousedown") {
-    			// 是否是主角运动
-    			var x  = curInput.x - player.x;
-    			var y = curInput.y - player.y;
-    			var len = Math.sqrt(x*x+y*y);
-    			x = x/len;
-    			y = y/len;
-    			if (curInput.name == player.name) {
-    				player.startMove({x,y});
-    			}else{
-    				for (var i = 0; i < others.length; i++) {
-    					if (others[i].name == curInput.name) {
-    						others[i].startMove({x,y});
-    						break;
-    					}
-    				}
-    			}
-    		}else if(curInput.type == "mouseup"){
-    			if (curInput.name == player.name) {
-    				player.endMove();
-    			}else{
-    				for (var i = 0; i < others.length; i++) {
-    					if (others[i].name == curInput.name) {
-    						others[i].endMove();
-    						break;
-    					}
-    				}
-    			}
-    		}else{
-    			console.log("还没实现!");
-    		}
-
-    		// 下一个关键帧
-    		keyFrame = nextFrame;
-    		// waitTime = 0;
-    	}
-    }else{
-    	curFrame++;
-    }
-}
-
-function gameLoop(){
-
-	//-----关键帧判断------------------
-	lockStep();
-	//--------------------------------
-
-	var now = Date.now();
-	var delta = now - then;
-
-	update(delta/1000);
-	render();
-	then = now;
-
-	++curFrame;
-
-	requestAnimationFrame(gameLoop);
-}	
-
-
 function update(delta){
 	player.update(delta);
 
@@ -234,7 +243,7 @@ function render(){
 
 	ctx.clearRect(0,0,canvasWidth,canvasHeight);
 	player.render(ctx);
-
+	//console.log("player.x and y",player.x,player.y);
 	for (var i = 0; i < others.length; i++) {
 		others[i].render(ctx);
 	}

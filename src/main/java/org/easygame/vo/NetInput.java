@@ -5,9 +5,34 @@ import org.json.JSONObject;
 public class NetInput {
 	private String type; // 输入类型
 	private int code; // 键盘事件使用
-	private int x, y; // 鼠标事件使用
+	private double x, y; // 鼠标事件使用
 	private String name; // 标示哪个玩家
 	private int frame; // 哪一帧
+	private long time;
+
+	public double getX() {
+		return x;
+	}
+
+	public void setX(double x) {
+		this.x = x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public void setY(double y) {
+		this.y = y;
+	}
+
+	public long getTime() {
+		return time;
+	}
+
+	public void setTime(long time) {
+		this.time = time;
+	}
 
 	public String getType() {
 		return type;
@@ -23,22 +48,6 @@ public class NetInput {
 
 	public void setCode(int code) {
 		this.code = code;
-	}
-
-	public int getX() {
-		return x;
-	}
-
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public void setY(int y) {
-		this.y = y;
 	}
 
 	public String getName() {
