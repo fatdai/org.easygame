@@ -1,5 +1,6 @@
 package org.easygame;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import io.netty.channel.Channel;
@@ -40,5 +41,9 @@ public class Msg {
 
 	public JSONObject getObject(String key) {
 		return object.getJSONObject(key);
+	}
+
+	public JSONArray getJsonArray(String key) {
+		return object.getJSONArray(key);
 	}
 }

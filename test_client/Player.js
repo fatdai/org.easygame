@@ -1,15 +1,15 @@
 
 var unit = 10;
-var speed = 10;
+var speed = 100;
 
 function Player(obj){
-	var tmpUser = obj[Constants.JK_USER];
-	this.name = tmpUser[Constants.JK_USERNAME];
-	this.x = tmpUser[Constants.JK_X];
-	this.y = tmpUser[Constants.JK_Y];
-	this.attack = tmpUser[Constants.JK_ATTACK];
-	this.defence = tmpUser[Constants.JK_DEFENCE];
-	this.level = tmpUser[Constants.JK_LEVEL];
+	
+	this.name = obj[Constants.JK_USERNAME];
+	this.x = obj[Constants.JK_X];
+	this.y = obj[Constants.JK_Y];
+	this.attack = obj[Constants.JK_ATTACK];
+	this.defence = obj[Constants.JK_DEFENCE];
+	this.level = obj[Constants.JK_LEVEL];
 
 	// 运动
 	this.moving = false;
@@ -32,8 +32,8 @@ Player.prototype.render = function(ctx) {
 
 Player.prototype.update = function(dt){
 	if (this.moving) {
-		this.x += (this.mx * dt);
-		this.y += (this.my * dt);
+		this.x += (this.mx * dt * speed);
+		this.y += (this.my * dt * speed);
 	}
 }
 

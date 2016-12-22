@@ -3,6 +3,7 @@ package org.easygame.handle;
 import org.easygame.Msg;
 import org.easygame.logic.GameLogic;
 import org.easygame.logic.OnlineUserMap;
+import org.easygame.vo.User;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.slf4j.Logger;
@@ -35,10 +36,17 @@ public class GameServerHandler extends SimpleChannelInboundHandler<String> {
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
 		super.channelInactive(ctx);
 		logger.debug("有玩家离线!");
-		// 有玩家离线
-		OnlineUserMap.getInstance().remove(ctx.channel());
-		logger.info("当前在线玩家数量:{}", OnlineUserMap.getInstance().getOnlineCount());
-		
+
+		// TODO 应该发送一个消息到游戏循环里面去做这事
+		User user = OnlineUserMap.getInstance().findByChannel(ctx.channel());
+		if (null != user) {
+
+			// 有玩家离线
+			OnlineUserMap.getInstance().remove(user.getUsername());
+
+			// 通知其他玩家,有人离线.
+			OnlineUserMap.getInstance().broadcastUserLeaveGame(user);
+		}
 	}
 
 }

@@ -1,6 +1,9 @@
-package org.easygame;
+package org.easygame.vo;
 
-import org.easygame.logic.OnlineUserMap;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.easygame.Constants;
 import org.json.JSONObject;
 
 import io.netty.channel.Channel;
@@ -19,6 +22,8 @@ public class User {
 
 	private int x;
 	private int y;
+	
+	public List<NetInput> inputs = new ArrayList<NetInput>();
 
 	public User() {
 

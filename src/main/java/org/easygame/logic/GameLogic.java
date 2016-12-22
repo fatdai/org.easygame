@@ -5,8 +5,10 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 import org.easygame.Constants;
 import org.easygame.Msg;
-import org.easygame.User;
 import org.easygame.db.UserDAO;
+import org.easygame.vo.NetInput;
+import org.easygame.vo.User;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,10 +68,29 @@ public class GameLogic implements Runnable {
 			msg.getChannel().writeAndFlush(ret.toString());
 		}else if (op == Constants.OP_STOP_MOVE) {
 			JSONObject ret = new JSONObject();
-			ret.put(Constants.JK_OP,Constants.OP_START_MOVE_REPLY);
+			ret.put(Constants.JK_OP,Constants.OP_STOP_MOVE_REPLY);
 			ret.put(Constants.JK_CODE,Constants.SUCCESS);
 			msg.getChannel().writeAndFlush(ret.toString());
-		}else {
+		}else if(op == Constants.OP_INPUTS){
+			User user = OnlineUserMap.getInstance().findByChannel(msg.getChannel());
+			
+			JSONArray array = msg.getJsonArray("inputs");
+			for (int i = 0; i < array.length(); i++) {
+				NetInput input = new NetInput();
+				JSONObject tmpObj = (JSONObject) array.get(i);
+				input.setFrame(tmpObj.getInt("frame"));
+				input.setName(tmpObj.getString("name"));
+				String type = tmpObj.getString("type");
+				input.setType(type);
+				if (type.equals("mousedown")) {
+					input.setX(tmpObj.getInt("x"));
+					input.setY(tmpObj.getInt("y"));
+				}
+				user.inputs.add(input);
+			}
+			
+		}
+		else {
 			logger.debug("un process op:{}",op);
 		}
 	}
@@ -98,6 +119,19 @@ public class GameLogic implements Runnable {
 				msg.getChannel().writeAndFlush(ret.toString());
 
 			} else {
+				
+				// 判断是否已经登陆
+				User oldUser = OnlineUserMap.getInstance().findByUsername(username);
+				if (null != oldUser) {
+					// 告诉 oldUser,你被踢下线
+					JSONObject obj = new JSONObject();
+					obj.put(Constants.JK_OP,Constants.OP_LOGIN_BY_OTHER);
+					oldUser.getChannel().writeAndFlush(obj.toString());
+					
+					// 然后踢掉
+					OnlineUserMap.getInstance().remove(oldUser.getUsername());
+					OnlineUserMap.getInstance().broadcastUserLeaveGame(oldUser);
+				}
 
 				// 登陆成功!
 				user.setChannel(msg.getChannel());
@@ -109,6 +143,8 @@ public class GameLogic implements Runnable {
 				ret.put(Constants.JK_CODE, Constants.SUCCESS);
 				ret.put(Constants.JK_USER, user.genUserJsonObject());
 				msg.getChannel().writeAndFlush(ret.toString());
+				
+				OnlineUserMap.getInstance().broadcastUserOnEnterGame(user);
 			}
 		} else if (msg.getOp() == Constants.OP_REGIST) {
 			// 获取 username passward
@@ -128,10 +164,10 @@ public class GameLogic implements Runnable {
 				newUser.setLevel(1);
 				newUser.setX(random.nextInt(Constants.WIDTH));
 				newUser.setY(random.nextInt(Constants.HEIGHT));
-				newUser.setChannel(msg.getChannel());
 				UserDAO.getInstance().insertUser(newUser);
 
 				// 直接放到在线的用户里
+				newUser.setChannel(msg.getChannel());
 				OnlineUserMap.getInstance().addUser(newUser);
 
 				JSONObject ret = new JSONObject();
@@ -139,6 +175,8 @@ public class GameLogic implements Runnable {
 				ret.put(Constants.JK_CODE, Constants.SUCCESS);
 				ret.put(Constants.JK_USER, newUser.genUserJsonObject());
 				msg.getChannel().writeAndFlush(ret.toString());
+				
+				OnlineUserMap.getInstance().broadcastUserOnEnterGame(newUser);
 			} else {
 				// 返回账号已存在,不可以注册
 				JSONObject ret = new JSONObject();
@@ -157,5 +195,7 @@ public class GameLogic implements Runnable {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 }

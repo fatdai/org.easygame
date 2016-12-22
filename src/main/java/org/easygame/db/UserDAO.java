@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.easygame.User;
+import org.easygame.vo.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
