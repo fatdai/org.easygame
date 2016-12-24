@@ -1,5 +1,6 @@
 package org.easygame.handle;
 
+import org.easygame.Constants;
 import org.easygame.Msg;
 import org.easygame.logic.GameLogic;
 import org.easygame.logic.OnlineUserMap;
@@ -37,16 +38,9 @@ public class GameServerHandler extends SimpleChannelInboundHandler<String> {
 		super.channelInactive(ctx);
 		logger.debug("有玩家离线!");
 
-		// TODO 应该发送一个消息到游戏循环里面去做这事
-		User user = OnlineUserMap.getInstance().findByChannel(ctx.channel());
-		if (null != user) {
-
-			// 有玩家离线
-			OnlineUserMap.getInstance().remove(user.getUsername());
-
-			// 通知其他玩家,有人离线.
-			OnlineUserMap.getInstance().broadcastUserLeaveGame(user);
-		}
+		JSONObject obj = new JSONObject();
+		obj.put("op",Constants.OP_LOGIN_OUT);
+		GameLogic.getInctance().add(new Msg(ctx.channel(), obj));
 	}
 
 }

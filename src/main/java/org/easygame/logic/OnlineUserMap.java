@@ -3,6 +3,7 @@ package org.easygame.logic;
 import io.netty.channel.Channel;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -23,7 +24,7 @@ public class OnlineUserMap {
 	private static OnlineUserMap onlineUserMap = new OnlineUserMap();
 
 	// 将username作为key
-	private Map<String, User> map = new ConcurrentHashMap<String, User>();
+	private Map<String, User> map = new HashMap<String, User>();
 
 	public static OnlineUserMap getInstance() {
 		return onlineUserMap;
@@ -98,6 +99,8 @@ public class OnlineUserMap {
 			ret.put(Constants.JK_CODE, Constants.SUCCESS);
 			ret.put(Constants.JK_OTHERS, array);
 			newUser.getChannel().writeAndFlush(ret.toString());
+			
+			logger.debug("other : {}",ret.toString());
 		}
 	}
 
@@ -131,10 +134,12 @@ public class OnlineUserMap {
 		}
 		ret.put("userstate", array);
 		ret.put("op", "alldata");
-
+		
 		for (Entry<String, User> entry : map.entrySet()) {
 			User user = entry.getValue();
 			user.getChannel().writeAndFlush(ret.toString());
 		}
+		
+		logger.debug("alldata:{}",ret.toString());
 	}
 }

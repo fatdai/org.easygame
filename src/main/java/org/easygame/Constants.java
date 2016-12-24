@@ -13,7 +13,8 @@ public class Constants {
 	public static final int OP_OTHERS = 105; // 其他玩家
 	public static final int OP_OTHER_LEAVE = 106;
 	public static final int OP_LOGIN_BY_OTHER = 107;  // 账号被别人登陆
-	public static final int OP_LOGIN_MAX = 107;
+	public static final int OP_LOGIN_OUT = 108; 
+	public static final int OP_LOGIN_MAX = 108;
 	
 	// move
 	public static final int OP_START_MOVE = 200;

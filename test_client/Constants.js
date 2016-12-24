@@ -43,7 +43,7 @@ Constants.JK_OTHERS = "others";  // 其他玩家
 Constants.JK_MOVE_DIR = "mdir";
 
 Constants.JK_INPUT = "input"; // 输入
-Constants.JK_TIME = "lag"; // 时间
+Constants.JK_TIME = "time"; // 时间
 
 
 // 返回码

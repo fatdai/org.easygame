@@ -29,6 +29,7 @@ public class GameLogic implements Runnable {
 
 	boolean needBroadcast = false;
 	static final long kLag = 150;
+
 	private GameLogic() {
 	}
 
@@ -55,7 +56,7 @@ public class GameLogic implements Runnable {
 
 			// 处理输入
 			processInput();
-			
+
 			// send world state
 			if (needBroadcast) {
 				sendWorldState();
@@ -83,9 +84,13 @@ public class GameLogic implements Runnable {
 			if (null == input) {
 				break;
 			}
-			
-			if (input.getType().equals("endmove")) {
-				logger.debug("准备执行 停止动画!");
+
+			if (input.getType().equals("startmove")) {
+				logger.debug("准备执行开始动画! input{}", input);
+			} else if (input.getType().equals("endmove")) {
+				logger.debug("准备执行 停止动画! input{}", input);
+			} else {
+				logger.debug("执行别的动画! input:{}", input);
 			}
 
 			// 这里假设输入都有效
@@ -230,6 +235,16 @@ public class GameLogic implements Runnable {
 				ret.put(Constants.JK_CODE, Constants.FAILED);
 				ret.put(Constants.JK_DESC, "账号已存在!");
 				msg.getChannel().writeAndFlush(ret.toString());
+			}
+		} else if (msg.getOp() == Constants.OP_LOGIN_OUT) {
+			User user = OnlineUserMap.getInstance().findByChannel(msg.getChannel());
+			if (null != user) {
+
+				// 有玩家离线
+				OnlineUserMap.getInstance().remove(user.getUsername());
+
+				// 通知其他玩家,有人离线.
+				OnlineUserMap.getInstance().broadcastUserLeaveGame(user);
 			}
 		}
 	}

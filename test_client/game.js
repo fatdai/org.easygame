@@ -1,11 +1,6 @@
-var canvas;
-var ctx;
-var player;  // 主角
+
 var then;
-var canvasWidth,canvasHeight;
 
-
-var others = []; // 其他在线的玩家
 var pendingInput = [];
 var recvMsg = [];
 
@@ -96,7 +91,7 @@ function processServerMsg(){
 
 					// 其他玩家应该计算一个更快的速度移动到指定位置
 				}else{
-					console.log("继续模拟....");
+					console.log(player.name,"    开始模拟....");
 					player.applyInput(input);
 					j++;
 				}
@@ -122,6 +117,7 @@ function processServerMsg(){
 
 					// 其他玩家应该计算一个更快的速度移动到指定位置
 				}else{
+					console.log(tmp.name,"   开始模拟....");
 					tmp.applyInput(input);
 					j++;
 				}
@@ -223,12 +219,7 @@ function shoot(){
 
 
 
-function getPointOnCanvas(x,y){
-	var bbox = canvas.getBoundingClientRect();
-	return { x: x - bbox.left * (canvas.width  / bbox.width),  
-		y: y - bbox.top  * (canvas.height / bbox.height)  
-	}; 
-}
+
 
 
 function update(delta){
@@ -242,7 +233,13 @@ function update(delta){
 function render(){
 
 	ctx.clearRect(0,0,canvasWidth,canvasHeight);
+
+	// 绘制格子
+	renderGrid(ctx);
+
+	// 绘制当前角色
 	player.render(ctx);
+
 	//console.log("player.x and y",player.x,player.y);
 	for (var i = 0; i < others.length; i++) {
 		others[i].render(ctx);
@@ -253,6 +250,7 @@ function render(){
 	// downBtn.render(ctx);
 	// leftBtn.render(ctx);
 	// rightBtn.render(ctx);
+
 
 
 }
