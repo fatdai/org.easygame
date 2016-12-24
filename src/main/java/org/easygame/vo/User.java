@@ -111,37 +111,37 @@ public class User {
 		return sb.toString();
 	}
 
-	// 产生 user json对象,不需要传递password
-	public JSONObject genUserJsonObject() {
-		JSONObject object = new JSONObject();
-		object.put(Constants.JK_USERNAME, username);
-		object.put(Constants.JK_X, x);
-		object.put(Constants.JK_Y, y);
-		object.put(Constants.JK_ATTACK, attack);
-		object.put(Constants.JK_DEFENCE, defence);
-		object.put(Constants.JK_LEVEL, level);
-		return object;
-	}
-	
-	public JSONObject genUserState() {
-		JSONObject object = new JSONObject();
-		object.put(Constants.JK_USERNAME, username);
-		object.put(Constants.JK_X, x);
-		object.put(Constants.JK_Y, y);
-		object.put(Constants.JK_ATTACK, x);
-		object.put(Constants.JK_DEFENCE, x);
-		object.put(Constants.JK_LEVEL, level);
-		
-		JSONObject dir = new JSONObject();
-		dir.put("dx", dx);
-		dir.put("dy", dy);
-		
-		object.put("dir", dir);
-		object.put("moving",moving?1:0);
-		object.put("frame", lastProcessedFrame);
-		object.put("time", time);
-		return object;
-	}
+//	// 产生 user json对象,不需要传递password
+//	public JSONObject genUserJsonObject() {
+//		JSONObject object = new JSONObject();
+//		object.put(Constants.JK_USERNAME, username);
+//		object.put(Constants.JK_X, x);
+//		object.put(Constants.JK_Y, y);
+//		object.put(Constants.JK_ATTACK, attack);
+//		object.put(Constants.JK_DEFENCE, defence);
+//		object.put(Constants.JK_LEVEL, level);
+//		return object;
+//	}
+//	
+//	public JSONObject genUserState() {
+//		JSONObject object = new JSONObject();
+//		object.put(Constants.JK_USERNAME, username);
+//		object.put(Constants.JK_X, x);
+//		object.put(Constants.JK_Y, y);
+//		object.put(Constants.JK_ATTACK, x);
+//		object.put(Constants.JK_DEFENCE, x);
+//		object.put(Constants.JK_LEVEL, level);
+//		
+//		JSONObject dir = new JSONObject();
+//		dir.put("dx", dx);
+//		dir.put("dy", dy);
+//		
+//		object.put("dir", dir);
+//		object.put("moving",moving?1:0);
+//		object.put("frame", lastProcessedFrame);
+//		object.put("time", time);
+//		return object;
+//	}
 
 	public void applyInput(NetInput input) {
 		if (input.getType().equals("startmove")) {

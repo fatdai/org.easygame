@@ -1,6 +1,6 @@
 
 var unit = 10;
-var speed = 4;
+var speed = 200;
 
 // 规定角色只能走8个方向
 var MDIR = {
@@ -8,27 +8,33 @@ var MDIR = {
 }
 
 var STATE = {
+
 	MOVING : 1, // 运动中
 	STATIC : 2, // 静止
+	ACCE : 3,
 }
 
 function Player(obj){
 	
-	// this.name = obj[Constants.JK_USERNAME];
-	// this.x = obj[Constants.JK_X];
-	// this.y = obj[Constants.JK_Y];
-	// this.attack = obj[Constants.JK_ATTACK];
-	// this.defence = obj[Constants.JK_DEFENCE];
-	// this.level = obj[Constants.JK_LEVEL];
-
+	this.id = obj.id;
 	this.name = obj.name;
 	this.gx = obj.gx;
 	this.gy = obj.gy;
 	this.state = obj.state;
 
-	this.x = this.gx * item;
-	this.y = this.gy * item;
+	if (this.state == STATE.MOVING) {
+		this.x = obj.x;
+		this.y = obj.y;
+	}else{
+		this.x = this.gx * item;
+		this.y = this.gy * item;
+	}
 
+	// 启动加速度
+	this.acc = 25;
+	this.speed = 0;
+
+	// 方向
 	this.dir = null;
 }
 
@@ -57,7 +63,6 @@ Player.prototype.calMDIR = function(point){
 	}else{
 		alert("未知的角度 degress : " + degress);
 	}
-	
 }
 
 Player.prototype.render = function(ctx) {
@@ -73,39 +78,62 @@ Player.prototype.render = function(ctx) {
 	ctx.restore();
 };
 
-Player.prototype.update = function(){
-	if (this.state == STATE.MOVING) {
-		if (this.dir == MDIR.LEFT) {
-			this.x -= speed;
-		}else if(this.dir == MDIR.RIGHT){
-			this.x += speed;
-		}else if(this.dir == MDIR.UP){
-			this.y -= speed;
-		}else if(this.dir == MDIR.DOWN){
-			this.y += speed;
-		}else if(this.dir == MDIR.LEFT_UP){
-			// 左上
-			this.x -= speed/1.41;
-			this.y -= speed/1.41;
-		}else if(this.dir == MDIR.LEFT_DOWN){
-			// 左下
-			this.x -= speed/1.41;
-			this.y += speed/1.41; 
-		}else if(this.dir == MDIR.RIGHT_UP){
-			// 右上
-			this.x += speed/1.41;
-			this.y -= speed/1.41;
-		}else if(this.dir == MDIR.RIGHT_DOWN){
-			// 右下
-			this.x += speed/1.41;
-			this.y += speed/1.41;
+Player.prototype.updatePosition = function(dt){
+	if (this.dir == MDIR.LEFT) {
+		this.x -= this.speed * dt;
+	}else if(this.dir == MDIR.RIGHT){
+		this.x += this.speed * dt;
+	}else if(this.dir == MDIR.UP){
+		this.y -= this.speed* dt;
+	}else if(this.dir == MDIR.DOWN){
+		this.y += this.speed* dt;
+	}else if(this.dir == MDIR.LEFT_UP){
+		// 左上
+		this.x -= this.speed* dt;
+		this.y -= this.speed* dt;
+	}else if(this.dir == MDIR.LEFT_DOWN){
+		// 左下
+		this.x -= this.speed* dt;
+		this.y += this.speed* dt;
+	}else if(this.dir == MDIR.RIGHT_UP){
+		// 右上
+		this.x += this.speed* dt;
+		this.y -= this.speed* dt;
+	}else if(this.dir == MDIR.RIGHT_DOWN){
+		// 右下
+		this.x += this.speed* dt;
+		this.y += this.speed* dt;
+	}
+}
+
+Player.prototype.update = function(dt){
+
+	// 加速阶段
+	if (this.state == STATE.ACCE) {
+		this.speed += this.acc * 0.02;
+		if (this.dir == MDIR.LEFT || this.dir == MDIR.RIGHT || this.dir == MDIR.UP || this.dir == MDIR.DOWN) {
+			if (this.speed >= speed) {
+				this.speed = speed;
+				this.state = STATE.MOVING;
+			}
+		}else{
+			if (this.speed >= speed/1.41) {
+				this.speed = speed/1.41;
+				this.state = STATE.MOVING;
+			}
 		}
+
+		this.updatePosition(dt);
+
+	}else if (this.state == STATE.MOVING) {
+		this.updatePosition(dt);
 	}
 }
 
 Player.prototype.startmove = function(dir){
 	this.dir = dir;
-	this.state = STATE.MOVING;
+	this.state = STATE.ACCE;
+	this.speed = 0;
 }
 
 Player.prototype.endmove = function(){
@@ -156,6 +184,7 @@ Player.prototype.applyInput = function(input){
 		this.my = 0;
 	}
 }
+
 
 
 

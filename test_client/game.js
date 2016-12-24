@@ -1,13 +1,6 @@
 
-var then;
-
-var pendingInput = [];
-var recvMsg = [];
-
-var curFrame = 0;  // 当前多少帧
-
 var validMouseDown = false; // 有效的mousedown
-var lag = 150; // 这里假设延迟为 150ms
+
 
 // 开始游戏
 function startGame(obj){
@@ -21,29 +14,25 @@ function startGame(obj){
 	canvas.addEventListener('mouseup',mouseup,false);
 	window.addEventListener("keydown",keydown,true);
 
-	player = new Player(obj[Constants.JK_USER]);
 	then = Date.now();
+
+	player = new Player(obj.p);
 	gameLoop();
 }	
 
 
 function gameLoop(){
 
-	processServerMsg();
+	var cur = Date.now();
+	var elapse = cur - then;
+	then = cur;
 
-	var now = Date.now();
-	var delta = now - then;
-
-	update(delta/1000);
+	update(elapse/1000);
 	render();
-	then = now;
-
-	++curFrame;
-
 	requestAnimationFrame(gameLoop);
 }
 
-function getUser(name) {
+function queryOtherPlayer(name) {
 	for(var i = 0; i < others.length; ++i){
 		if (others[i].name == name) {
 			return others[i];
@@ -52,80 +41,80 @@ function getUser(name) {
 }
 
 // 获取当前需要被执行的 input
-function getProcessedMsg(){
-	for(var i = 0; i < recvMsg.length;i++){
-		if (recvMsg[i].time <= Date.now() ) {
-			var msg = recvMsg[i];
-			recvMsg.remove(i);
-			return msg;
-		}
-	}
-}
+// function getProcessedMsg(){
+// 	for(var i = 0; i < recvMsg.length;i++){
+// 		if (recvMsg[i].time <= Date.now() ) {
+// 			var msg = recvMsg[i];
+// 			recvMsg.remove(i);
+// 			return msg;
+// 		}
+// 	}
+// }
 
 // 处理服务端的消息
-function processServerMsg(){
+// function processServerMsg(){
 
-	while(true){
-		var state = getProcessedMsg();
-		if (!state) {
-			break;
-		}
+// 	while(true){
+// 		var state = getProcessedMsg();
+// 		if (!state) {
+// 			break;
+// 		}
 
-		console.log("-----state:",state);
-		if (state.username == player.name) {
+// 		console.log("-----state:",state);
+// 		if (state.username == player.name) {
 
-			// 当前角色
-			player.moving = (state.moving == 1?true:false);
-			player.mx = state.dir.dx;
-			player.my = state.dir.dy;
+// 			// 当前角色
+// 			player.moving = (state.moving == 1?true:false);
+// 			player.mx = state.dir.dx;
+// 			player.my = state.dir.dy;
 
-			// 继续模拟未处理的输入
-			var j = 0;
-			while( j < pendingInput.length){
-				var input = pendingInput[j];
-				if (input.frame <= state.frame) {
+// 			// 继续模拟未处理的输入
+// 			var j = 0;
+// 			while( j < pendingInput.length){
+// 				var input = pendingInput[j];
+// 				if (input.frame <= state.frame) {
 
-					console.log("服务器已经处理....");
-					// 服务器已经处理
-					pendingInput.remove(j);
+// 					console.log("服务器已经处理....");
+// 					// 服务器已经处理
+// 					pendingInput.remove(j);
 
-					// 其他玩家应该计算一个更快的速度移动到指定位置
-				}else{
-					console.log(player.name,"    开始模拟....");
-					player.applyInput(input);
-					j++;
-				}
-			}
-		}else{
-			// 处理其他用户
-			var tmp = getUser(state.username);
-			console.log("tmp:",tmp);
-			if (!tmp) {
-				return;
-			}
-			tmp.moving = state.moving;
-			tmp.mx = state.dir.dx;
-			tmp.my = state.dir.dy;
+// 					// 其他玩家应该计算一个更快的速度移动到指定位置
+// 				}else{
+// 					console.log(player.name,"    开始模拟....");
+// 					player.applyInput(input);
+// 					j++;
+// 				}
+// 			}
+// 		}else{
+// 			// 处理其他用户
+// 			var tmp = getUser(state.username);
+// 			console.log("tmp:",tmp);
+// 			if (!tmp) {
+// 				return;
+// 			}
+// 			tmp.moving = state.moving;
+// 			tmp.mx = state.dir.dx;
+// 			tmp.my = state.dir.dy;
 
-			// 继续模拟未处理的输入
-			var j = 0;
-			while( j < pendingInput.length){
-				var input = pendingInput[j];
-				if (input.frame <= state.frame) {
-					// 服务器已经处理
-					pendingInput.remove(j);
+// 			// 继续模拟未处理的输入
+// 			var j = 0;
+// 			while( j < pendingInput.length){
+// 				var input = pendingInput[j];
+// 				if (input.frame <= state.frame) {
+// 					// 服务器已经处理
+// 					pendingInput.remove(j);
 
-					// 其他玩家应该计算一个更快的速度移动到指定位置
-				}else{
-					console.log(tmp.name,"   开始模拟....");
-					tmp.applyInput(input);
-					j++;
-				}
-			}
+// 					// 其他玩家应该计算一个更快的速度移动到指定位置
+// 				}else{
+// 					console.log(tmp.name,"   开始模拟....");
+// 					tmp.applyInput(input);
+// 					j++;
+// 				}
+// 			}
 
-		}
-	}
-}
+// 		}
+// 	}
+// }
 
 
 function mousedown(e){
@@ -133,58 +122,45 @@ function mousedown(e){
 	var point = getPointOnCanvas(e.x,e.y);
 
 	// 在有效区域内 就shoot
-	if (point.x >= 0 && point.x <= canvasWidth && point.y >=0 && point.y <= canvasHeight) {
+	if (point.x >= 0 && 
+		point.x <= canvasWidth && 
+		point.y >=0 && 
+		point.y <= canvasHeight) {
 
-		var x = point.x - player.x;
-		var y = point.y - player.y;
-		var len = Math.sqrt(x*x+y*y);
-		var dx = x/len;
-		var dy = y/len;
+		// 计算方向
+		var dir = player.calMDIR(point);
 
-		// 组装成一个 input
-		var input = {};
-		input.type = "startmove";  // 输入名字
-		input.dir = {dx:dx,dy:dy};
-		input.name = player.name;
-		input.frame = curFrame;
+		// --- 发送事件
+		var ret = {};
+		ret.op = "move_start";
+		ret.dir = dir;
+		ret.gx = player.gx;
+		ret.gy = player.gy;
+		ret.id = player.id;
+		ws.send(JSON.stringify(ret));
 
-		// 发给服务器
-		sendInput(input);
-
-		// 客户端开始模拟
-		player.applyInput(input);
-
-		pendingInput.push(input);
-
+		player.startmove(dir);
 		validMouseDown = true;
 	}
 }
 
-function sendInput(input) {
-	var obj = {};
-	obj[Constants.JK_OP] = Constants.OP_INPUTS; // 输入
-	obj[Constants.JK_INPUT] = input;
-	obj[Constants.JK_TIME] = Date.now() + lag; // 暂时不处理
-	ws.send(JSON.stringify(obj));
-}
+// function sendInput(input) {
+// 	var obj = {};
+// 	obj[Constants.JK_OP] = Constants.OP_INPUTS; // 输入
+// 	obj[Constants.JK_INPUT] = input;
+// 	obj[Constants.JK_TIME] = Date.now() + lag; // 暂时不处理
+// 	ws.send(JSON.stringify(obj));
+// }
 
 
 function mouseup(e){
 	if (validMouseDown) {
-		// 组装成一个 input
-		var input = {};
-		input.type = "endmove";
-		input.frame = curFrame;
-		input.name = player.name;
+		var ret = {};
+		ret.op = "move_end";
+		ret.id = player.id;
+		ws.send(JSON.stringify(ret));
 
-		// 发给服务器
-		sendInput(input);
-
-		// 客户端开始模拟
-		player.applyInput(input);
-
-		pendingInput.push(input);
-
+		player.endmove();
 		validMouseDown = false;
 	}
 }
@@ -222,11 +198,12 @@ function shoot(){
 
 
 
-function update(delta){
-	player.update(delta);
+function update(dt){
+
+	player.update(dt);
 
 	for (var i = 0; i < others.length; i++) {
-		others[i].update(delta);
+		others[i].update(dt);
 	}
 }
 
@@ -235,7 +212,7 @@ function render(){
 	ctx.clearRect(0,0,canvasWidth,canvasHeight);
 
 	// 绘制格子
-	renderGrid(ctx);
+	grid.render(ctx);
 
 	// 绘制当前角色
 	player.render(ctx);
@@ -244,13 +221,4 @@ function render(){
 	for (var i = 0; i < others.length; i++) {
 		others[i].render(ctx);
 	}
-
-	// render ui
-	// upBtn.render(ctx);
-	// downBtn.render(ctx);
-	// leftBtn.render(ctx);
-	// rightBtn.render(ctx);
-
-
-
 }

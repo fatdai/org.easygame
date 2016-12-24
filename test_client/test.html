@@ -37,12 +37,17 @@
 	}
 
 	function init() {
+
+		//------------- init curPlayer-----------------
 		var obj = {};
 		obj.name = "dai";
 		obj.gx = 5;
 		obj.gy = 5; 
 		obj.state = STATE.STATIC;
 		player = new Player(obj);
+
+		//------------- init others-----------------
+		
 	}
 
 	function gameLoop(){
@@ -73,7 +78,6 @@
 		if (point.x > 0 && point.x < canvasWidth && point.y > 0 && point.y < canvasHeight) {
 			// 计算方向
 			var dir = player.calMDIR(point);
-			console.log("dir:",dir);
 			player.startmove(dir);
 			validmoving = true;
 		}

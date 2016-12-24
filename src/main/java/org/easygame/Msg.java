@@ -2,10 +2,13 @@ package org.easygame;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import io.netty.channel.Channel;
 
 public class Msg {
+	private static Logger logger = LoggerFactory.getLogger(Msg.class);
 	private Channel channel;
 	private JSONObject object;
 
@@ -31,8 +34,8 @@ public class Msg {
 		this.object = object;
 	}
 
-	public int getOp() {
-		return object.getInt(Constants.JK_OP);
+	public String getOp() {
+		return object.getString("op");
 	}
 
 	public String getString(String key) {
@@ -42,12 +45,25 @@ public class Msg {
 	public JSONObject getObject(String key) {
 		return object.getJSONObject(key);
 	}
-	
-	public long getLong(String key){
+
+	public long getLong(String key) {
 		return object.getLong(key);
 	}
 
 	public JSONArray getJsonArray(String key) {
 		return object.getJSONArray(key);
+	}
+
+	public int getInt(String key) {
+		return object.getInt(key);
+	}
+
+	public static void Send(Channel channel, JSONObject obj) {
+		String op = obj.getString("op");
+		if (null == op) {
+			throw new NullPointerException("没有消息返回标示!");
+		}
+		logger.debug("send op : {}", op);
+		channel.writeAndFlush(obj.toString());
 	}
 }

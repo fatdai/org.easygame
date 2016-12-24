@@ -5,8 +5,9 @@
 	<!--  protobuf -->
 	<!-- <script src="//cdn.rawgit.com/dcodeIO/protobuf.js/6.X.X/dist/protobuf.min.js"></script> -->
 	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="Grid.js"></script>
+	<script type="text/javascript" src="Globals.js"></script>
 	<script type="text/javascript" src="Utils.js"></script>
-	<script type="text/javascript" src="Constants.js"></script>
 	<script type="text/javascript" src="keycode.js"></script>
 	<script type="text/javascript" src="Button.js"></script>
 	<script type="text/javascript" src="Player.js"></script>
@@ -25,62 +26,71 @@
 			ws = new WebSocket("ws://localhost:8888/game"); 
 
 			ws.onmessage = function(event){
-				console.log("onmessage called!");
-				console.log(event.data);
+				
 				var obj = JSON.parse(event.data);
-
-				// 登陆返回
-				if (obj[Constants.JK_OP] == Constants.OP_LOGIN_REPLY) {
-					console.log("login reply code:",obj[Constants.JK_CODE]);
-					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
-						console.log("登陆成功,准备切换到游戏界面!");
-						showGame(obj);
-						return;
-					}
-					console.log("登录不成功!");
-				}else if(obj[Constants.JK_OP] == Constants.OP_REGIST_REPLY){
-					// 注册
-					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
-						console.log("注册成功,准备切换到游戏界面!");
-						showGame(obj);
-						return;
-					}
-					console.log("注册不成功!");
-				}else if(obj[Constants.JK_OP] == Constants.OP_OTHER_ENTER){
-					// 有其他玩家登陆
-					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
-						var newPlayer = new Player(obj[Constants.JK_USER_ENTER_GAME]);
-						others.push(newPlayer);
-						return;
-					}
-					console.log("其他玩家已经登陆!");
-				}else if(obj[Constants.JK_OP] == Constants.OP_OTHERS){
-					// 其他在线的玩家信息
-					if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
-						var arr = obj[Constants.JK_OTHERS];
-						for (var i = 0; i < arr.length; i++) {
-							var newPlayer = new Player(arr[i]);
-							others.push(newPlayer);
-						}
-						return;
-					}
-					console.log("获取其他在线玩家数据错误!");
-				}else if(obj[Constants.JK_OP] == Constants.OP_OTHER_LEAVE){
-					// 有玩家离开
-					for (var i = 0; i < others.length; i++) {
-						if (others[i].name == obj[Constants.JK_USERNAME]) {
-							others.remove(i);
-							break;
-						}
-					}
-				}else if(obj[Constants.JK_OP] == Constants.OP_LOGIN_BY_OTHER){
-					// 账号被别人登录
-					alert("账号被别人登录!");
-					showLogin();
+				console.log("收到消息:",obj.op);
+				if (obj.op.indexOf("login_") == 0) {
+					processLogin(obj);
+				}else if (obj.op.indexOf("move_") == 0) {
+					processMove(obj);
+				}else if(obj.op.indexOf("sys_") == 0){
+					processSys(obj);
 				}else{
-					// process other op
-					process(obj);
+					console.log("un catched op :",obj.op);
 				}
+
+			// 	// 登陆返回
+			// 	if (obj[Constants.JK_OP] == Constants.OP_LOGIN_REPLY) {
+			// 		console.log("login reply code:",obj[Constants.JK_CODE]);
+			// 		if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
+			// 			console.log("登陆成功,准备切换到游戏界面!");
+			// 			showGame(obj);
+			// 			return;
+			// 		}
+			// 		console.log("登录不成功!");
+			// 	}else if(obj[Constants.JK_OP] == Constants.OP_REGIST_REPLY){
+			// 		// 注册
+			// 		if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
+			// 			console.log("注册成功,准备切换到游戏界面!");
+			// 			showGame(obj);
+			// 			return;
+			// 		}
+			// 		console.log("注册不成功!");
+			// 	}else if(obj[Constants.JK_OP] == Constants.OP_OTHER_ENTER){
+			// 		// 有其他玩家登陆
+			// 		if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
+			// 			var newPlayer = new Player(obj[Constants.JK_USER_ENTER_GAME]);
+			// 			others.push(newPlayer);
+			// 			return;
+			// 		}
+			// 		console.log("其他玩家已经登陆!");
+			// 	}else if(obj[Constants.JK_OP] == Constants.OP_OTHERS){
+			// 		// 其他在线的玩家信息
+			// 		if (obj[Constants.JK_CODE] == ReplyCode.SUCCESS) {
+			// 			var arr = obj[Constants.JK_OTHERS];
+			// 			for (var i = 0; i < arr.length; i++) {
+			// 				var newPlayer = new Player(arr[i]);
+			// 				others.push(newPlayer);
+			// 			}
+			// 			return;
+			// 		}
+			// 		console.log("获取其他在线玩家数据错误!");
+			// 	}else if(obj[Constants.JK_OP] == Constants.OP_OTHER_LEAVE){
+			// 		// 有玩家离开
+			// 		for (var i = 0; i < others.length; i++) {
+			// 			if (others[i].name == obj[Constants.JK_USERNAME]) {
+			// 				others.remove(i);
+			// 				break;
+			// 			}
+			// 		}
+			// 	}else if(obj[Constants.JK_OP] == Constants.OP_LOGIN_BY_OTHER){
+			// 		// 账号被别人登录
+			// 		alert("账号被别人登录!");
+			// 		showLogin();
+			// 	}else{
+			// 		// process other op
+			// 		process(obj);
+			// 	}
 			}
 
 			ws.onclose = function(event){
@@ -103,9 +113,9 @@
 
 			if (username.value != "" && password.value != "") {
 				var obj = {};
-				obj[Constants.JK_OP] = Constants.OP_LOGIN;
-				obj[Constants.JK_USERNAME] = username.value;
-				obj[Constants.JK_PASSWORD] = password.value;
+				obj.op = "login_on";
+				obj.name = username.value;
+				obj.pwd = password.value;
 				ws.send(JSON.stringify(obj));
 			}else{
 				alert("请输入账号和密码!");
@@ -127,9 +137,9 @@
 			}else{
 				// 传送过去
 				var obj = {};
-				obj[Constants.JK_OP] = Constants.OP_REGIST;
-				obj[Constants.JK_USERNAME] = uname.value;
-				obj[Constants.JK_PASSWORD] = pwd1.value;
+				obj.op = "login_regist";
+				obj.name = uname.value;
+				obj.pwd = pwd1.value;
 				ws.send(JSON.stringify(obj));
 				return;
 			}
@@ -183,7 +193,7 @@
 
 	<!-- 游戏 -->
 	<div id="gameDiv">
-		<canvas width="480px" height="320px" style="border: 1px;background-color: black;" id="canvas"></canvas>
+		<canvas width="640px" height="480px" style="border: 1px;background-color: black;" id="canvas"></canvas>
 	</div>
 </body>
 </html>

@@ -6,6 +6,9 @@ var canvasWidth,canvasHeight;
 var item = 10;
 var grid = new Grid(item);
 
+var then;
+
+
 
 //#############################################
 // 全局变量

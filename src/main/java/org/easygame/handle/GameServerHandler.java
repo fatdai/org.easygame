@@ -1,10 +1,7 @@
 package org.easygame.handle;
 
-import org.easygame.Constants;
 import org.easygame.Msg;
 import org.easygame.logic.GameLogic;
-import org.easygame.logic.OnlineUserMap;
-import org.easygame.vo.User;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.slf4j.Logger;
@@ -29,7 +26,7 @@ public class GameServerHandler extends SimpleChannelInboundHandler<String> {
 			JSONTokener tokener = new JSONTokener(msg);
 			logger.debug("msg is :{}", msg);
 			JSONObject object = (JSONObject) tokener.nextValue();
-			GameLogic.getInctance().add(new Msg(ctx.channel(), object));
+			GameLogic.getInctance().add(new Msg(ctx.channel(), object)); // 收消息
 		}
 	}
 
@@ -39,7 +36,7 @@ public class GameServerHandler extends SimpleChannelInboundHandler<String> {
 		logger.debug("有玩家离线!");
 
 		JSONObject obj = new JSONObject();
-		obj.put("op",Constants.OP_LOGIN_OUT);
+		obj.put("op","login_out");
 		GameLogic.getInctance().add(new Msg(ctx.channel(), obj));
 	}
 
